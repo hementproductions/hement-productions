@@ -19,7 +19,6 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-
     /* NAVIGATION */
 
     nav {
@@ -57,7 +56,6 @@
       color: #f3eee8;
     }
 
-
     /* HERO */
 
     .hero {
@@ -85,7 +83,6 @@
       color: #c7c0bb;
       margin: 0;
     }
-
 
     /* ABOUT */
 
@@ -116,7 +113,6 @@
       margin: 0;
       color: #f3eee8;
     }
-
 
     /* SELECTED WORK */
 
@@ -170,8 +166,15 @@
     .project-image img {
       width: 100%;
       height: 100%;
-      object-fit: contain;
       display: block;
+    }
+
+    .euphoria-image img {
+      object-fit: contain;
+    }
+
+    .ghost-image img {
+      object-fit: cover;
     }
 
     .project-image-link {
@@ -212,6 +215,7 @@
       font-size: 12px;
       letter-spacing: 1px;
       color: #9a928d;
+      line-height: 1.7;
       margin: 0 0 8px;
     }
 
@@ -219,6 +223,7 @@
       font-size: 11px;
       letter-spacing: 1px;
       color: #807a76;
+      line-height: 1.6;
       margin: 0;
     }
 
@@ -247,7 +252,6 @@
     .project-action:hover {
       color: #b04b5a;
     }
-
 
     /* MOBILE */
 
@@ -295,7 +299,6 @@
   </style>
 </head>
 
-
 <body>
 
   <nav>
@@ -313,7 +316,6 @@
 
   </nav>
 
-
   <section class="hero">
 
     <h1>
@@ -325,7 +327,6 @@
     </p>
 
   </section>
-
 
   <section class="intro" id="about">
 
@@ -339,7 +340,6 @@
     </h2>
 
   </section>
-
 
   <section class="work" id="work">
 
@@ -355,9 +355,7 @@
 
     </div>
 
-
     <div class="work-grid">
-
 
       <!-- EUPHORIA -->
 
@@ -370,7 +368,7 @@
           rel="noopener"
         >
 
-          <div class="project-image">
+          <div class="project-image euphoria-image">
 
             <img
               src="euphoria-cover.jpeg"
@@ -380,7 +378,6 @@
           </div>
 
         </a>
-
 
         <div class="project-info">
 
@@ -425,16 +422,27 @@
 
       </div>
 
-
-      <!-- PROJECT TWO -->
+      <!-- GHOST FOREST -->
 
       <div class="project-card">
 
-        <div class="project-image">
-          <span class="placeholder">
-            PROJECT IMAGE
-          </span>
-        </div>
+        <a
+          class="project-image-link"
+          href="https://www.youtube.com/watch?v=ct1WBP1bsjA"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <div class="project-image ghost-image">
+
+            <img
+              src="https://img.youtube.com/vi/ct1WBP1bsjA/hqdefault.jpg"
+              alt="Ghost Forest interdisciplinary live performance"
+            >
+
+          </div>
+
+        </a>
 
         <div class="project-info">
 
@@ -443,17 +451,36 @@
           </p>
 
           <h3 class="project-title">
-            Project Two
+            Ghost Forest
           </h3>
 
           <p class="project-credit">
-            Music · Performance · Sound
+            Featuring the climactic piece “Rarrr”
           </p>
+
+          <p class="project-credit">
+            Composition · Lyrics · Vocal Composition ·
+            Electronic Production · Live Performance
+          </p>
+
+          <p class="project-label">
+            Performed live with the music ensemble alongside dancers
+            as part of an interdisciplinary work spanning dance,
+            music and sound, scenography, theatre production and film.
+          </p>
+
+          <a
+            class="project-action"
+            href="https://www.youtube.com/watch?v=ct1WBP1bsjA"
+            target="_blank"
+            rel="noopener"
+          >
+            WATCH PERFORMANCE ↗
+          </a>
 
         </div>
 
       </div>
-
 
       <!-- PROJECT THREE -->
 
@@ -483,11 +510,9 @@
 
       </div>
 
-
     </div>
 
   </section>
-
 
 </body>
 
