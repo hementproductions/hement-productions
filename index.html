@@ -9,6 +9,10 @@
 
   <style>
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: #0b0b0b;
@@ -94,7 +98,7 @@
     }
 
 
-    /* ABOUT INTRO */
+    /* ABOUT */
 
     .intro {
       min-height: 100vh;
@@ -120,7 +124,7 @@
     }
 
     .intro h2 {
-      max-width: 1100px;
+      max-width: 1350px;
 
       font-family: Georgia, "Times New Roman", serif;
 
@@ -137,12 +141,123 @@
     }
 
 
+    /* SELECTED WORK */
+
+    .work {
+      padding: 140px 6%;
+      box-sizing: border-box;
+
+      border-top: 1px solid #242424;
+    }
+
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      margin-bottom: 70px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+
+      color: #7a3038;
+
+      margin: 0;
+    }
+
+    .section-number {
+      font-size: 11px;
+      letter-spacing: 3px;
+
+      color: #6f6a67;
+    }
+
+    .work-grid {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 24px;
+    }
+
+    .project-card {
+      text-decoration: none;
+      color: #f3eee8;
+    }
+
+    .project-image {
+      aspect-ratio: 4 / 5;
+
+      background: #161616;
+
+      border: 1px solid #242424;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+
+      transition: transform 0.4s ease,
+                  border-color 0.4s ease;
+    }
+
+    .project-card:hover .project-image {
+      transform: translateY(-6px);
+      border-color: #7a3038;
+    }
+
+    .placeholder {
+      font-size: 11px;
+
+      letter-spacing: 3px;
+
+      color: #5c5754;
+    }
+
+    .project-info {
+      padding-top: 20px;
+    }
+
+    .project-type {
+      font-size: 10px;
+
+      letter-spacing: 3px;
+
+      color: #7a3038;
+
+      margin: 0 0 10px;
+    }
+
+    .project-title {
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 28px;
+
+      font-weight: 400;
+
+      margin: 0 0 10px;
+    }
+
+    .project-credit {
+      font-size: 12px;
+
+      letter-spacing: 1px;
+
+      color: #8e8884;
+
+      margin: 0;
+    }
+
+
     /* MOBILE */
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
 
       nav {
-        padding: 24px;
+        padding: 22px 20px;
       }
 
       .nav-links {
@@ -170,6 +285,15 @@
         font-size: 38px;
       }
 
+      .work {
+        padding: 100px 24px;
+      }
+
+      .work-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+
     }
 
   </style>
@@ -177,6 +301,7 @@
 
 
 <body>
+
 
   <nav>
 
@@ -186,7 +311,7 @@
 
     <div class="nav-links">
 
-      <a href="#">WORK</a>
+      <a href="#work">WORK</a>
 
       <a href="#">STUDIO</a>
 
@@ -222,6 +347,110 @@
       Independent creative production for music, sound,
       visual culture and emerging interactive worlds.
     </h2>
+
+  </section>
+
+
+  <section class="work" id="work">
+
+    <div class="section-top">
+
+      <p class="section-label">
+        SELECTED WORK
+      </p>
+
+      <span class="section-number">
+        01 — 03
+      </span>
+
+    </div>
+
+
+    <div class="work-grid">
+
+
+      <a class="project-card" href="#">
+
+        <div class="project-image">
+          <span class="placeholder">
+            PROJECT IMAGE
+          </span>
+        </div>
+
+        <div class="project-info">
+
+          <p class="project-type">
+            MUSIC / COLLABORATION
+          </p>
+
+          <h3 class="project-title">
+            Project One
+          </h3>
+
+          <p class="project-credit">
+            Songwriting · Vocals · Production
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <a class="project-card" href="#">
+
+        <div class="project-image">
+          <span class="placeholder">
+            PROJECT IMAGE
+          </span>
+        </div>
+
+        <div class="project-info">
+
+          <p class="project-type">
+            LIVE / INTERDISCIPLINARY
+          </p>
+
+          <h3 class="project-title">
+            Project Two
+          </h3>
+
+          <p class="project-credit">
+            Music · Performance · Sound
+          </p>
+
+        </div>
+
+      </a>
+
+
+      <a class="project-card" href="#">
+
+        <div class="project-image">
+          <span class="placeholder">
+            PROJECT IMAGE
+          </span>
+        </div>
+
+        <div class="project-info">
+
+          <p class="project-type">
+            MUSIC / RELEASE
+          </p>
+
+          <h3 class="project-title">
+            Project Three
+          </h3>
+
+          <p class="project-credit">
+            Production · Writing · Vocals
+          </p>
+
+        </div>
+
+      </a>
+
+
+    </div>
 
   </section>
 
