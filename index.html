@@ -19,6 +19,9 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
+
+    /* NAVIGATION */
+
     nav {
       position: fixed;
       top: 0;
@@ -50,6 +53,13 @@
       letter-spacing: 2px;
     }
 
+    .nav-links a:hover {
+      color: #f3eee8;
+    }
+
+
+    /* HERO */
+
     .hero {
       min-height: 100vh;
       padding: 40px;
@@ -75,6 +85,9 @@
       color: #c7c0bb;
       margin: 0;
     }
+
+
+    /* ABOUT */
 
     .intro {
       min-height: 100vh;
@@ -104,6 +117,9 @@
       color: #f3eee8;
     }
 
+
+    /* SELECTED WORK */
+
     .work {
       padding: 140px 6%;
       box-sizing: border-box;
@@ -120,7 +136,7 @@
     .section-label {
       font-size: 11px;
       letter-spacing: 4px;
-      color: #7a3038;
+      color: #b04b5a;
       margin: 0;
     }
 
@@ -133,11 +149,10 @@
     .work-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 36px;
     }
 
     .project-card {
-      text-decoration: none;
       color: #f3eee8;
     }
 
@@ -159,9 +174,14 @@
       display: block;
     }
 
-    .project-card:hover .project-image {
+    .project-image-link {
+      display: block;
+      text-decoration: none;
+    }
+
+    .project-image-link:hover .project-image {
       transform: translateY(-6px);
-      border-color: #7a3038;
+      border-color: #b04b5a;
     }
 
     .placeholder {
@@ -177,7 +197,7 @@
     .project-type {
       font-size: 10px;
       letter-spacing: 3px;
-      color: #7a3038;
+      color: #b04b5a;
       margin: 0 0 10px;
     }
 
@@ -191,18 +211,48 @@
     .project-credit {
       font-size: 12px;
       letter-spacing: 1px;
-      color: #8e8884;
+      color: #9a928d;
       margin: 0 0 8px;
     }
 
     .project-label {
       font-size: 11px;
       letter-spacing: 1px;
-      color: #6f6a67;
+      color: #807a76;
       margin: 0;
     }
 
+    .label-link {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid #4a4542;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .label-link:hover {
+      color: #f3eee8;
+      border-color: #b04b5a;
+    }
+
+    .project-action {
+      display: inline-block;
+      margin: 18px 0 0;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #c7c0bb;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .project-action:hover {
+      color: #b04b5a;
+    }
+
+
+    /* MOBILE */
+
     @media (max-width: 900px) {
+
       nav {
         padding: 22px 20px;
       }
@@ -238,33 +288,21 @@
 
       .work-grid {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 70px;
       }
     }
-    .label-link {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: 1px solid #4a4542;
-}
 
-.label-link:hover {
-  color: #f3eee8;
-  border-color: #b04b5a;
-}
-
-.project-action {
-  margin: 18px 0 0;
-  font-size: 10px;
-  letter-spacing: 3px;
-  color: #c7c0bb;
-}
   </style>
 </head>
+
 
 <body>
 
   <nav>
-    <div class="brand">HEMENT</div>
+
+    <div class="brand">
+      HEMENT
+    </div>
 
     <div class="nav-links">
       <a href="#work">WORK</a>
@@ -272,46 +310,80 @@
       <a href="#about">ABOUT</a>
       <a href="#">CONTACT</a>
     </div>
+
   </nav>
 
+
   <section class="hero">
-    <h1>Hement Productions</h1>
-    <p>Music. Sound. Creative Technology.</p>
+
+    <h1>
+      Hement Productions
+    </h1>
+
+    <p>
+      Music. Sound. Creative Technology.
+    </p>
+
   </section>
 
+
   <section class="intro" id="about">
-    <p class="intro-label">ABOUT HEMENT</p>
+
+    <p class="intro-label">
+      ABOUT HEMENT
+    </p>
 
     <h2>
       Independent creative production for music, sound,
       visual culture and emerging interactive worlds.
     </h2>
+
   </section>
+
 
   <section class="work" id="work">
 
     <div class="section-top">
-      <p class="section-label">SELECTED WORK</p>
-      <span class="section-number">01 — 03</span>
+
+      <p class="section-label">
+        SELECTED WORK
+      </p>
+
+      <span class="section-number">
+        01 — 03
+      </span>
+
     </div>
+
 
     <div class="work-grid">
 
-      <a
-        class="project-card"
-        href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0w?si=5f85f4bda5cf4ab9"
-        target="_blank"
-        rel="noopener"
-      >
 
-        <div class="project-image">
-          <img
-            src="euphoria-cover.jpeg"
-            alt="Euphoria by Gold Soul Leo and Tita Boku"
-          >
-        </div>
+      <!-- EUPHORIA -->
+
+      <div class="project-card">
+
+        <a
+          class="project-image-link"
+          href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0w?si=5f85f4bda5cf4ab9"
+          target="_blank"
+          rel="noopener"
+        >
+
+          <div class="project-image">
+
+            <img
+              src="euphoria-cover.jpeg"
+              alt="Euphoria by Gold Soul Leo and Tita Boku"
+            >
+
+          </div>
+
+        </a>
+
 
         <div class="project-info">
+
           <p class="project-type">
             MUSIC / COLLABORATION
           </p>
@@ -329,32 +401,43 @@
           </p>
 
           <p class="project-label">
-            <p class="project-label">
-  Released by
-  <a
-    class="label-link"
-    href="https://nexorarecords.fr/"
-    target="_blank"
-    rel="noopener"
-  >
-    Nexora Records
-  </a>
-</p>
-
-<p class="project-action">
-  LISTEN ON SPOTIFY ↗
-</p>
+            Released by
+            <a
+              class="label-link"
+              href="https://nexorarecords.fr/"
+              target="_blank"
+              rel="noopener"
+            >
+              Nexora Records
+            </a>
           </p>
+
+          <a
+            class="project-action"
+            href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0w?si=5f85f4bda5cf4ab9"
+            target="_blank"
+            rel="noopener"
+          >
+            LISTEN ON SPOTIFY ↗
+          </a>
+
         </div>
 
-      </a>
+      </div>
 
-      <a class="project-card" href="#">
+
+      <!-- PROJECT TWO -->
+
+      <div class="project-card">
+
         <div class="project-image">
-          <span class="placeholder">PROJECT IMAGE</span>
+          <span class="placeholder">
+            PROJECT IMAGE
+          </span>
         </div>
 
         <div class="project-info">
+
           <p class="project-type">
             LIVE / INTERDISCIPLINARY
           </p>
@@ -366,15 +449,24 @@
           <p class="project-credit">
             Music · Performance · Sound
           </p>
-        </div>
-      </a>
 
-      <a class="project-card" href="#">
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT THREE -->
+
+      <div class="project-card">
+
         <div class="project-image">
-          <span class="placeholder">PROJECT IMAGE</span>
+          <span class="placeholder">
+            PROJECT IMAGE
+          </span>
         </div>
 
         <div class="project-info">
+
           <p class="project-type">
             MUSIC / RELEASE
           </p>
@@ -386,11 +478,17 @@
           <p class="project-credit">
             Production · Writing · Vocals
           </p>
+
         </div>
-      </a>
+
+      </div>
+
 
     </div>
+
   </section>
 
+
 </body>
+
 </html>
