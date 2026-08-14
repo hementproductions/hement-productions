@@ -104,6 +104,8 @@
       margin: 0 auto;
     }
 
+    /* HEADER */
+
     .site-header {
       position: sticky;
       top: 0;
@@ -272,6 +274,15 @@
     .project-note {
       font-size: 0.95rem;
       margin-bottom: 14px;
+    }
+
+    .project-note a {
+      color: var(--text);
+      transition: color 0.2s ease;
+    }
+
+    .project-note a:hover {
+      color: var(--burgundy);
     }
 
     .project-link {
@@ -688,7 +699,7 @@
 
           <a
             class="project-card"
-            href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0W?si=5f85f4bda5cf4ab9"
+            href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0w?si=5f85f4bda5cf4ab9"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -717,7 +728,14 @@
             </div>
 
             <div class="project-note">
-              Released by Nexora Records
+              Released by
+              <a
+                href="https://nexorarecords.fr/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Nexora Records ↗
+              </a>
             </div>
 
             <span class="project-link">
