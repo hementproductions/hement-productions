@@ -121,28 +121,41 @@
       margin-bottom: 40px;
     }
 
-    /* HERO */
+    /* ORIGINAL HERO */
 
-    .hero-intro {
-      padding-top: 95px;
-      padding-bottom: 110px;
+    .hero {
+      min-height: calc(100vh - 88px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 0;
     }
 
-    .hero-brand {
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 0.95rem;
-      letter-spacing: 0.34em;
-      text-transform: uppercase;
-      color: var(--burgundy);
-      margin-bottom: 32px;
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
-    .hero-copy {
-      max-width: 1250px;
-      font-size: clamp(3.4rem, 5.4vw, 6.2rem);
-      line-height: 0.98;
-      letter-spacing: -0.035em;
+    .hero h1 {
+      margin: 0 0 28px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(4rem, 7vw, 7.5rem);
+      line-height: 0.95;
+      font-weight: 400;
+      letter-spacing: -0.04em;
       color: var(--text);
+    }
+
+    .hero p {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
 
     /* WORK */
@@ -482,6 +495,8 @@
       color: var(--burgundy);
     }
 
+    /* FOOTER */
+
     .footer {
       padding: 24px 0 40px;
       border-top: 1px solid rgba(255,255,255,0.05);
@@ -497,6 +512,7 @@
     /* RESPONSIVE */
 
     @media (max-width: 1200px) {
+
       .work-grid,
       .studio-grid,
       .about-grid,
@@ -519,6 +535,7 @@
     }
 
     @media (max-width: 860px) {
+
       :root {
         --section-pad: 72px;
       }
@@ -552,8 +569,18 @@
         gap: 10px;
       }
 
-      .hero-copy {
-        font-size: clamp(2.8rem, 9vw, 4.5rem);
+      .hero {
+        min-height: calc(100vh - 130px);
+      }
+
+      .hero h1 {
+        font-size: clamp(3.4rem, 13vw, 5rem);
+      }
+
+      .hero p {
+        font-size: 0.78rem;
+        letter-spacing: 0.24em;
+        line-height: 1.8;
       }
 
       .about-body p {
@@ -565,6 +592,8 @@
 </head>
 
 <body>
+
+  <!-- HEADER -->
 
   <header class="site-header">
     <div class="header-inner">
@@ -585,25 +614,28 @@
 
   <main id="top">
 
-    <!-- HERO -->
+    <!-- ORIGINAL OPENING -->
 
-    <section class="hero-intro">
-      <div class="container">
+    <section class="hero">
 
-        <div class="hero-brand">
+      <div class="container hero-inner">
+
+        <h1>
           Hement Productions
-        </div>
+        </h1>
 
-        <div class="hero-copy">
-          Music, sound, interdisciplinary work and emerging interactive worlds.
-        </div>
+        <p>
+          Music. Sound. Creative Technology.
+        </p>
 
       </div>
+
     </section>
 
     <!-- SELECTED WORK -->
 
     <section id="work">
+
       <div class="container">
 
         <div class="section-label">
@@ -622,10 +654,12 @@
           >
 
             <div class="project-image">
+
               <img
                 src="euphoria-cover.jpeg"
                 alt="Euphoria cover art"
               />
+
             </div>
 
             <div class="project-label">
@@ -664,10 +698,12 @@
           >
 
             <div class="project-image">
+
               <img
                 src="ghost-forest.png"
                 alt="Ghost Forest performance still"
               />
+
             </div>
 
             <div class="project-label">
@@ -707,10 +743,12 @@
           >
 
             <div class="project-image">
+
               <img
                 src="blood-drips.png"
                 alt="Blood Drips cover art"
               />
+
             </div>
 
             <div class="project-label">
@@ -740,12 +778,15 @@
           </a>
 
         </div>
+
       </div>
+
     </section>
 
     <!-- CAPABILITIES -->
 
     <section id="capabilities">
+
       <div class="container">
 
         <div class="section-label">
@@ -767,7 +808,10 @@
         <div class="capabilities-grid">
 
           <div class="capability">
-            <span class="capability-number">01</span>
+
+            <span class="capability-number">
+              01
+            </span>
 
             <h3 class="capability-title">
               Music Production
@@ -777,10 +821,14 @@
               Original production, arrangement, songwriting and collaborative
               development across recorded music and artist-led projects.
             </div>
+
           </div>
 
           <div class="capability">
-            <span class="capability-number">02</span>
+
+            <span class="capability-number">
+              02
+            </span>
 
             <h3 class="capability-title">
               Vocals & Songwriting
@@ -791,10 +839,14 @@
               performance and creative development shaped around the identity
               of each project.
             </div>
+
           </div>
 
           <div class="capability">
-            <span class="capability-number">03</span>
+
+            <span class="capability-number">
+              03
+            </span>
 
             <h3 class="capability-title">
               Sound Design
@@ -804,10 +856,14 @@
               Original sonic worlds for music, performance, visual work and
               experimental media, from texture and atmosphere to rhythm-forward design.
             </div>
+
           </div>
 
           <div class="capability">
-            <span class="capability-number">04</span>
+
+            <span class="capability-number">
+              04
+            </span>
 
             <h3 class="capability-title">
               Live & Interdisciplinary
@@ -817,10 +873,14 @@
               Music and sound developed in conversation with movement,
               projection, theatre, visual art and collaborative production environments.
             </div>
+
           </div>
 
           <div class="capability">
-            <span class="capability-number">05</span>
+
+            <span class="capability-number">
+              05
+            </span>
 
             <h3 class="capability-title">
               Creative Technology
@@ -830,31 +890,41 @@
               Practice shaped through digital production, studio technology,
               experimental workflows and curiosity for new tools and hybrid forms.
             </div>
+
           </div>
 
           <div class="capability">
-            <span class="capability-number">06</span>
+
+            <span class="capability-number">
+              06
+            </span>
 
             <h3 class="capability-title">
               Interactive Worlds
+
               <span class="capability-tag">
                 Emerging
               </span>
+
             </h3>
 
             <div class="capability-desc">
               A growing direction toward indie game development, world-building
               and interactive storytelling as part of Hement’s evolving creative future.
             </div>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
     <!-- STUDIO -->
 
     <section id="studio">
+
       <div class="container">
 
         <div class="section-label">
@@ -943,12 +1013,15 @@
           </div>
 
         </div>
+
       </div>
+
     </section>
 
     <!-- ABOUT -->
 
     <section id="about">
+
       <div class="container">
 
         <div class="about-grid">
@@ -1050,12 +1123,15 @@
           </div>
 
         </div>
+
       </div>
+
     </section>
 
     <!-- CONTACT -->
 
     <section id="contact">
+
       <div class="container">
 
         <div class="section-label">
@@ -1080,31 +1156,48 @@
 
           <div class="contact-links">
 
-            <a class="contact-link" href="mailto:your@email.com">
+            <a
+              class="contact-link"
+              href="mailto:your@email.com"
+            >
               Email
             </a>
 
-            <a class="contact-link" href="#">
+            <a
+              class="contact-link"
+              href="#"
+            >
               Spotify
             </a>
 
-            <a class="contact-link" href="#">
+            <a
+              class="contact-link"
+              href="#"
+            >
               YouTube
             </a>
 
-            <a class="contact-link" href="#">
+            <a
+              class="contact-link"
+              href="#"
+            >
               Instagram
             </a>
 
           </div>
 
         </div>
+
       </div>
+
     </section>
 
   </main>
 
+  <!-- FOOTER -->
+
   <footer class="footer">
+
     <div class="container">
 
       <div class="footer-copy">
@@ -1112,6 +1205,7 @@
       </div>
 
     </div>
+
   </footer>
 
 </body>
