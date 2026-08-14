@@ -8,7 +8,6 @@
   <title>Hement Productions</title>
 
   <style>
-
     html {
       scroll-behavior: smooth;
     }
@@ -20,24 +19,17 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-
-    /* NAVIGATION */
-
     nav {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       box-sizing: border-box;
-
       padding: 28px 40px;
-
       display: flex;
       justify-content: space-between;
       align-items: center;
-
       z-index: 100;
-
       background: #0b0b0b;
     }
 
@@ -54,99 +46,67 @@
     .nav-links a {
       color: #c7c0bb;
       text-decoration: none;
-
       font-size: 12px;
       letter-spacing: 2px;
     }
 
-
-    /* HERO */
-
     .hero {
       min-height: 100vh;
-
       padding: 40px;
       box-sizing: border-box;
-
       display: flex;
       flex-direction: column;
-
       align-items: center;
       justify-content: center;
-
       text-align: center;
     }
 
     .hero h1 {
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: 82px;
       font-weight: 400;
-
       letter-spacing: -2px;
-
       margin: 0 0 24px;
     }
 
     .hero p {
       font-size: 20px;
       letter-spacing: 3px;
-
       color: #c7c0bb;
-
       margin: 0;
     }
 
-
-    /* ABOUT */
-
     .intro {
       min-height: 100vh;
-
       padding: 120px 8%;
       box-sizing: border-box;
-
       display: flex;
       flex-direction: column;
-
       justify-content: center;
-
       border-top: 1px solid #242424;
     }
 
     .intro-label {
       font-size: 11px;
       letter-spacing: 4px;
-
       color: #7a3038;
-
       margin: 0 0 35px;
     }
 
     .intro h2 {
       max-width: 1350px;
-
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: 58px;
       line-height: 1.15;
-
       font-weight: 400;
-
       letter-spacing: -1px;
-
       margin: 0;
-
       color: #f3eee8;
     }
-
-
-    /* SELECTED WORK */
 
     .work {
       padding: 140px 6%;
       box-sizing: border-box;
-
       border-top: 1px solid #242424;
     }
 
@@ -154,31 +114,25 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-
       margin-bottom: 70px;
     }
 
     .section-label {
       font-size: 11px;
       letter-spacing: 4px;
-
       color: #7a3038;
-
       margin: 0;
     }
 
     .section-number {
       font-size: 11px;
       letter-spacing: 3px;
-
       color: #6f6a67;
     }
 
     .work-grid {
       display: grid;
-
       grid-template-columns: repeat(3, 1fr);
-
       gap: 24px;
     }
 
@@ -189,19 +143,20 @@
 
     .project-image {
       aspect-ratio: 4 / 5;
-
       background: #161616;
-
       border: 1px solid #242424;
-
       display: flex;
       align-items: center;
       justify-content: center;
-
       overflow: hidden;
+      transition: transform 0.4s ease, border-color 0.4s ease;
+    }
 
-      transition: transform 0.4s ease,
-                  border-color 0.4s ease;
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .project-card:hover .project-image {
@@ -211,9 +166,7 @@
 
     .placeholder {
       font-size: 11px;
-
       letter-spacing: 3px;
-
       color: #5c5754;
     }
 
@@ -223,39 +176,33 @@
 
     .project-type {
       font-size: 10px;
-
       letter-spacing: 3px;
-
       color: #7a3038;
-
       margin: 0 0 10px;
     }
 
     .project-title {
       font-family: Georgia, "Times New Roman", serif;
-
       font-size: 28px;
-
       font-weight: 400;
-
       margin: 0 0 10px;
     }
 
     .project-credit {
       font-size: 12px;
-
       letter-spacing: 1px;
-
       color: #8e8884;
+      margin: 0 0 8px;
+    }
 
+    .project-label {
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: #6f6a67;
       margin: 0;
     }
 
-
-    /* MOBILE */
-
     @media (max-width: 900px) {
-
       nav {
         padding: 22px 20px;
       }
@@ -293,119 +240,90 @@
         grid-template-columns: 1fr;
         gap: 60px;
       }
-
     }
-
   </style>
 </head>
 
-
 <body>
 
-
   <nav>
-
-    <div class="brand">
-      HEMENT
-    </div>
+    <div class="brand">HEMENT</div>
 
     <div class="nav-links">
-
       <a href="#work">WORK</a>
-
       <a href="#">STUDIO</a>
-
       <a href="#about">ABOUT</a>
-
       <a href="#">CONTACT</a>
-
     </div>
-
   </nav>
 
-
   <section class="hero">
-
-    <h1>
-      Hement Productions
-    </h1>
-
-    <p>
-      Music. Sound. Creative Technology.
-    </p>
-
+    <h1>Hement Productions</h1>
+    <p>Music. Sound. Creative Technology.</p>
   </section>
 
-
   <section class="intro" id="about">
-
-    <p class="intro-label">
-      ABOUT HEMENT
-    </p>
+    <p class="intro-label">ABOUT HEMENT</p>
 
     <h2>
       Independent creative production for music, sound,
       visual culture and emerging interactive worlds.
     </h2>
-
   </section>
-
 
   <section class="work" id="work">
 
     <div class="section-top">
-
-      <p class="section-label">
-        SELECTED WORK
-      </p>
-
-      <span class="section-number">
-        01 — 03
-      </span>
-
+      <p class="section-label">SELECTED WORK</p>
+      <span class="section-number">01 — 03</span>
     </div>
-
 
     <div class="work-grid">
 
-
-      <a class="project-card" href="#">
+      <a
+        class="project-card"
+        href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0w?si=5f85f4bda5cf4ab9"
+        target="_blank"
+        rel="noopener"
+      >
 
         <div class="project-image">
-          <span class="placeholder">
-            PROJECT IMAGE
-          </span>
+          <img
+            src="Euphoria cover art.jpeg"
+            alt="Euphoria by Gold Soul Leo and Tita Boku"
+          >
         </div>
 
         <div class="project-info">
-
           <p class="project-type">
             MUSIC / COLLABORATION
           </p>
 
           <h3 class="project-title">
-            Project One
+            Euphoria
           </h3>
 
           <p class="project-credit">
-            Songwriting · Vocals · Production
+            Gold Soul Leo × Tita Boku
           </p>
 
+          <p class="project-credit">
+            Songwriting · Vocals · Vocal Composition
+          </p>
+
+          <p class="project-label">
+            Released by Nexora Records
+          </p>
         </div>
 
       </a>
 
-
       <a class="project-card" href="#">
-
         <div class="project-image">
-          <span class="placeholder">
-            PROJECT IMAGE
-          </span>
+          <span class="placeholder">PROJECT IMAGE</span>
         </div>
 
         <div class="project-info">
-
           <p class="project-type">
             LIVE / INTERDISCIPLINARY
           </p>
@@ -417,22 +335,15 @@
           <p class="project-credit">
             Music · Performance · Sound
           </p>
-
         </div>
-
       </a>
 
-
       <a class="project-card" href="#">
-
         <div class="project-image">
-          <span class="placeholder">
-            PROJECT IMAGE
-          </span>
+          <span class="placeholder">PROJECT IMAGE</span>
         </div>
 
         <div class="project-info">
-
           <p class="project-type">
             MUSIC / RELEASE
           </p>
@@ -444,17 +355,11 @@
           <p class="project-credit">
             Production · Writing · Vocals
           </p>
-
         </div>
-
       </a>
 
-
     </div>
-
   </section>
 
-
 </body>
-
 </html>
