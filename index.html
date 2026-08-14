@@ -19,8 +19,6 @@
       font-family: Arial, Helvetica, sans-serif;
     }
 
-    /* NAVIGATION */
-
     nav {
       position: fixed;
       top: 0;
@@ -56,8 +54,6 @@
       color: #f3eee8;
     }
 
-    /* HERO */
-
     .hero {
       min-height: 100vh;
       padding: 40px;
@@ -83,8 +79,6 @@
       color: #c7c0bb;
       margin: 0;
     }
-
-    /* ABOUT */
 
     .intro {
       min-height: 100vh;
@@ -113,8 +107,6 @@
       margin: 0;
       color: #f3eee8;
     }
-
-    /* SELECTED WORK */
 
     .work {
       padding: 140px 6%;
@@ -169,7 +161,8 @@
       display: block;
     }
 
-    .euphoria-image img {
+    .euphoria-image img,
+    .blood-image img {
       object-fit: contain;
     }
 
@@ -185,12 +178,6 @@
     .project-image-link:hover .project-image {
       transform: translateY(-6px);
       border-color: #b04b5a;
-    }
-
-    .placeholder {
-      font-size: 11px;
-      letter-spacing: 3px;
-      color: #5c5754;
     }
 
     .project-info {
@@ -253,10 +240,7 @@
       color: #b04b5a;
     }
 
-    /* MOBILE */
-
     @media (max-width: 900px) {
-
       nav {
         padding: 22px 20px;
       }
@@ -295,17 +279,13 @@
         gap: 70px;
       }
     }
-
   </style>
 </head>
 
 <body>
 
   <nav>
-
-    <div class="brand">
-      HEMENT
-    </div>
+    <div class="brand">HEMENT</div>
 
     <div class="nav-links">
       <a href="#work">WORK</a>
@@ -313,46 +293,27 @@
       <a href="#about">ABOUT</a>
       <a href="#">CONTACT</a>
     </div>
-
   </nav>
 
   <section class="hero">
-
-    <h1>
-      Hement Productions
-    </h1>
-
-    <p>
-      Music. Sound. Creative Technology.
-    </p>
-
+    <h1>Hement Productions</h1>
+    <p>Music. Sound. Creative Technology.</p>
   </section>
 
   <section class="intro" id="about">
-
-    <p class="intro-label">
-      ABOUT HEMENT
-    </p>
+    <p class="intro-label">ABOUT HEMENT</p>
 
     <h2>
       Independent creative production for music, sound,
       visual culture and emerging interactive worlds.
     </h2>
-
   </section>
 
   <section class="work" id="work">
 
     <div class="section-top">
-
-      <p class="section-label">
-        SELECTED WORK
-      </p>
-
-      <span class="section-number">
-        01 — 03
-      </span>
-
+      <p class="section-label">SELECTED WORK</p>
+      <span class="section-number">01 — 03</span>
     </div>
 
     <div class="work-grid">
@@ -367,27 +328,18 @@
           target="_blank"
           rel="noopener"
         >
-
           <div class="project-image euphoria-image">
-
             <img
               src="euphoria-cover.jpeg"
               alt="Euphoria by Gold Soul Leo and Tita Boku"
             >
-
           </div>
-
         </a>
 
         <div class="project-info">
+          <p class="project-type">MUSIC / COLLABORATION</p>
 
-          <p class="project-type">
-            MUSIC / COLLABORATION
-          </p>
-
-          <h3 class="project-title">
-            Euphoria
-          </h3>
+          <h3 class="project-title">Euphoria</h3>
 
           <p class="project-credit">
             Gold Soul Leo × Tita Boku
@@ -417,7 +369,6 @@
           >
             LISTEN ON SPOTIFY ↗
           </a>
-
         </div>
 
       </div>
@@ -432,27 +383,18 @@
           target="_blank"
           rel="noopener"
         >
-
           <div class="project-image ghost-image">
-
             <img
               src="ghost-forest.png"
               alt="Ghost Forest interdisciplinary live performance featuring Rarrr"
             >
-
           </div>
-
         </a>
 
         <div class="project-info">
+          <p class="project-type">LIVE / INTERDISCIPLINARY</p>
 
-          <p class="project-type">
-            LIVE / INTERDISCIPLINARY
-          </p>
-
-          <h3 class="project-title">
-            Ghost Forest
-          </h3>
+          <h3 class="project-title">Ghost Forest</h3>
 
           <p class="project-credit">
             Featuring the climactic piece “Rarrr”
@@ -477,35 +419,53 @@
           >
             WATCH PERFORMANCE ↗
           </a>
-
         </div>
 
       </div>
 
-      <!-- PROJECT THREE -->
+      <!-- BLOOD DRIPS -->
 
       <div class="project-card">
 
-        <div class="project-image">
-          <span class="placeholder">
-            PROJECT IMAGE
-          </span>
-        </div>
+        <a
+          class="project-image-link"
+          href="https://open.spotify.com/album/2icrXpqQwYfkdkcs4aQ66h?si=6SrxCEhUTy-_kNOaMuQdhA"
+          target="_blank"
+          rel="noopener"
+        >
+          <div class="project-image blood-image">
+            <img
+              src="blood-drips.png"
+              alt="Blood Drips by Tita Boku"
+            >
+          </div>
+        </a>
 
         <div class="project-info">
+          <p class="project-type">MUSIC / ORIGINAL RELEASE</p>
 
-          <p class="project-type">
-            MUSIC / RELEASE
-          </p>
-
-          <h3 class="project-title">
-            Project Three
-          </h3>
+          <h3 class="project-title">Blood Drips</h3>
 
           <p class="project-credit">
-            Production · Writing · Vocals
+            Tita Boku
           </p>
 
+          <p class="project-credit">
+            Music Production · Songwriting · Vocals
+          </p>
+
+          <p class="project-label">
+            Mixed by Ken Lewis
+          </p>
+
+          <a
+            class="project-action"
+            href="https://open.spotify.com/album/2icrXpqQwYfkdkcs4aQ66h?si=6SrxCEhUTy-_kNOaMuQdhA"
+            target="_blank"
+            rel="noopener"
+          >
+            LISTEN ON SPOTIFY ↗
+          </a>
         </div>
 
       </div>
