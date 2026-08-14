@@ -1,833 +1,833 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hement Productions</title>
+  <meta
+    name="description"
+    content="Hement Productions is an evolving creative house for music, interdisciplinary work, sound design and emerging interactive worlds."
+  />
 
   <style>
+    :root {
+      --bg: #050505;
+      --panel: #0d0d0f;
+      --panel-2: #111114;
+      --line: rgba(255,255,255,0.08);
+      --text: #f2ece6;
+      --muted: #b6aaa1;
+      --burgundy: #a33b4f;
+      --burgundy-soft: #b04b60;
+      --max-width: 1640px;
+      --section-pad: 88px;
+      --grid-gap: 32px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
-      background: #0b0b0b;
-      color: #f3eee8;
-      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
+    img {
+      display: block;
       width: 100%;
-      box-sizing: border-box;
-      padding: 28px 40px;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 64px), var(--max-width));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+
+    .header-inner {
+      width: min(calc(100% - 64px), var(--max-width));
+      margin: 0 auto;
+      min-height: 88px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      z-index: 100;
-      background: #0b0b0b;
+      justify-content: space-between;
+      gap: 24px;
     }
 
     .brand {
-      font-size: 14px;
-      letter-spacing: 4px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
-    .nav-links {
+    .nav {
       display: flex;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      color: #c7c0bb;
-      text-decoration: none;
-      font-size: 12px;
-      letter-spacing: 2px;
-    }
-
-    .nav-links a:hover {
-      color: #f3eee8;
-    }
-
-    .hero {
-      min-height: 100vh;
-      padding: 40px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      text-align: center;
+      gap: 42px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    .hero h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 82px;
-      font-weight: 400;
-      letter-spacing: -2px;
-      margin: 0 0 24px;
+    .nav a {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: #f0e8df;
+      transition: color 0.2s ease;
     }
 
-    .hero p {
-      font-size: 20px;
-      letter-spacing: 3px;
-      color: #c7c0bb;
-      margin: 0;
+    .nav a:hover {
+      color: var(--burgundy-soft);
     }
 
-    .intro {
-      min-height: 100vh;
-      padding: 120px 8%;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border-top: 1px solid #242424;
-    }
-
-    .intro-label {
-      font-size: 11px;
-      letter-spacing: 4px;
-      color: #b04b5a;
-      margin: 0 0 35px;
-    }
-
-    .intro h2 {
-      max-width: 1350px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 58px;
-      line-height: 1.15;
-      font-weight: 400;
-      letter-spacing: -1px;
-      margin: 0;
-      color: #f3eee8;
-    }
-
-    .work {
-      padding: 140px 6%;
-      box-sizing: border-box;
-      border-top: 1px solid #242424;
-    }
-
-    .section-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 70px;
+    section {
+      padding: var(--section-pad) 0;
+      scroll-margin-top: 96px;
     }
 
     .section-label {
-      font-size: 11px;
-      letter-spacing: 4px;
-      color: #b04b5a;
-      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--burgundy-soft);
+      margin-bottom: 40px;
     }
 
-    .section-number {
-      font-size: 11px;
-      letter-spacing: 3px;
-      color: #6f6a67;
+    .hero-intro {
+      padding-top: 56px;
+      padding-bottom: 48px;
+    }
+
+    .hero-copy {
+      max-width: 1100px;
+      font-size: clamp(2.8rem, 5vw, 6rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      color: var(--text);
     }
 
     .work-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 36px;
+      gap: var(--grid-gap);
+      align-items: start;
     }
 
     .project-card {
-      color: #f3eee8;
+      display: block;
     }
 
     .project-image {
       aspect-ratio: 1 / 1;
-      background: #161616;
-      border: 1px solid #242424;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.06);
       overflow: hidden;
-      transition: transform 0.4s ease, border-color 0.4s ease;
+      margin-bottom: 22px;
     }
 
     .project-image img {
       width: 100%;
       height: 100%;
-      display: block;
-    }
-
-    .euphoria-image img,
-    .blood-image img {
-      object-fit: contain;
-    }
-
-    .ghost-image img {
       object-fit: cover;
+      transition: transform 0.35s ease;
     }
 
-    .project-image-link {
-      display: block;
-      text-decoration: none;
-    }
-
-    .project-image-link:hover .project-image {
-      transform: translateY(-6px);
-      border-color: #b04b5a;
-    }
-
-    .project-info {
-      padding-top: 20px;
-    }
-
-    .project-type {
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: #b04b5a;
-      margin: 0 0 10px;
-    }
-
-    .project-title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
-      font-weight: 400;
-      margin: 0 0 10px;
-    }
-
-    .project-credit {
-      font-size: 12px;
-      letter-spacing: 1px;
-      color: #9a928d;
-      line-height: 1.7;
-      margin: 0 0 8px;
+    .project-card:hover .project-image img {
+      transform: scale(1.02);
     }
 
     .project-label {
-      font-size: 11px;
-      letter-spacing: 1px;
-      color: #807a76;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.33em;
+      text-transform: uppercase;
+      color: var(--burgundy-soft);
+      margin-bottom: 12px;
+    }
+
+    .project-title {
+      font-size: clamp(2rem, 2.2vw, 3.3rem);
+      line-height: 1.02;
+      margin: 0 0 12px 0;
+      color: var(--text);
+    }
+
+    .project-meta,
+    .project-desc,
+    .project-note {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--muted);
       line-height: 1.6;
-      margin: 0;
     }
 
-    .label-link {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid #4a4542;
-      transition: color 0.3s ease, border-color 0.3s ease;
+    .project-meta {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
     }
 
-    .label-link:hover {
-      color: #f3eee8;
-      border-color: #b04b5a;
+    .project-desc {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
     }
 
-    .project-action {
+    .project-note {
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+    }
+
+    .project-link {
       display: inline-block;
-      margin: 18px 0 0;
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: #c7c0bb;
-      text-decoration: none;
-      transition: color 0.3s ease;
+      margin-top: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text);
+      transition: color 0.2s ease;
     }
 
-    .project-action:hover {
-      color: #b04b5a;
+    .project-link:hover {
+      color: var(--burgundy-soft);
     }
 
-    .capabilities {
-      padding: 150px 6%;
-      box-sizing: border-box;
-      border-top: 1px solid #242424;
+    .capabilities-lead-wrap {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 52px;
     }
 
-    .capabilities-heading {
-      max-width: 900px;
-      margin: 0 0 90px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 58px;
-      line-height: 1.12;
-      font-weight: 400;
-      letter-spacing: -1px;
+    .capabilities-number {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--muted);
+      white-space: nowrap;
+      padding-top: 4px;
+    }
+
+    .capabilities-lead {
+      max-width: 1200px;
+      font-size: clamp(2.8rem, 5vw, 5.7rem);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      margin: 0;
     }
 
     .capabilities-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 70px;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 72px;
     }
 
     .capability {
-      padding: 35px 0;
-      border-top: 1px solid #242424;
+      padding: 28px 0 36px;
+      border-top: 1px solid var(--line);
     }
 
     .capability-number {
       display: block;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.92rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--burgundy-soft);
       margin-bottom: 18px;
-      font-size: 10px;
-      letter-spacing: 3px;
-      color: #b04b5a;
     }
 
-    .capability h3 {
-      margin: 0 0 14px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
-      font-weight: 400;
+    .capability-title {
+      font-size: clamp(2rem, 2.5vw, 3.5rem);
+      line-height: 1.05;
+      margin: 0 0 16px 0;
     }
 
-    .capability p {
-      max-width: 560px;
-      margin: 0;
-      font-size: 13px;
-      line-height: 1.8;
-      letter-spacing: 0.5px;
-      color: #8f8884;
+    .capability-desc {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--muted);
+      max-width: 690px;
     }
 
-    .emerging {
-      color: #b04b5a;
-      font-size: 9px;
-      letter-spacing: 3px;
-      margin-left: 8px;
+    .capability-tag {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--burgundy-soft);
+      margin-left: 14px;
       vertical-align: middle;
+      white-space: nowrap;
     }
 
-    /* ABOUT / FOUNDER */
-
-    .founder {
-      padding: 150px 6%;
-      box-sizing: border-box;
-      border-top: 1px solid #242424;
-    }
-
-    .founder-grid {
+    .studio-grid {
       display: grid;
-      grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.2fr);
-      gap: 90px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
       align-items: start;
     }
 
-    .founder-sticky {
-      position: sticky;
-      top: 105px;
-      align-self: start;
-    }
-
-    .founder-image {
-      width: 100%;
-      aspect-ratio: 4 / 5;
+    .studio-image-wrap {
+      border: 1px solid rgba(255,255,255,0.06);
+      background: var(--panel);
       overflow: hidden;
-      background: #161616;
-      border: 1px solid #242424;
-      margin-bottom: 30px;
     }
 
-    .founder-image img {
+    .studio-image {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center 30%;
-      display: block;
     }
 
-    .founder-kicker {
-      font-size: 11px;
-      letter-spacing: 4px;
-      color: #b04b5a;
-      margin: 0 0 18px;
+    .studio-copy {
+      padding-top: 4px;
     }
 
-    .founder-name {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 44px;
-      line-height: 1.05;
-      font-weight: 400;
-      letter-spacing: -1px;
-      margin: 0 0 14px;
+    .studio-title {
+      font-size: clamp(2.4rem, 3vw, 4.2rem);
+      line-height: 1.03;
+      margin: 0 0 20px 0;
     }
 
-    .founder-role {
-      margin: 0;
-      font-size: 11px;
+    .studio-text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
       line-height: 1.8;
-      letter-spacing: 2px;
-      color: #8f8884;
-      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 16px;
+      max-width: 560px;
     }
 
-    .founder-copy {
-      max-width: 900px;
-      padding-top: 2px;
+    .studio-details {
+      margin-top: 34px;
+      border-top: 1px solid var(--line);
     }
 
-    .founder-copy p {
-      margin: 0 0 24px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 24px;
-      line-height: 1.55;
-      color: #d7d0cb;
-    }
-
-    .founder-copy p:last-of-type {
-      margin-bottom: 50px;
-    }
-
-    .credentials {
-      border-top: 1px solid #242424;
-    }
-
-    .credential {
+    .detail-row {
       display: grid;
-      grid-template-columns: 170px 1fr;
-      gap: 30px;
-      padding: 18px 0;
-      border-bottom: 1px solid #242424;
+      grid-template-columns: 180px 1fr;
+      gap: 24px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
     }
 
-    .credential-label {
-      font-size: 9px;
-      letter-spacing: 3px;
-      color: #b04b5a;
+    .detail-label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
+      color: var(--burgundy-soft);
     }
 
-    .credential-value {
-      font-size: 11px;
-      letter-spacing: 1.5px;
-      line-height: 1.7;
-      color: #9a928d;
+    .detail-value {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--muted);
     }
 
-    @media (max-width: 900px) {
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      gap: 56px;
+      align-items: start;
+    }
 
-      nav {
-        padding: 22px 20px;
-      }
+    .about-photo {
+      position: sticky;
+      top: 118px;
+      align-self: start;
+      border: 1px solid rgba(255,255,255,0.06);
+      background: var(--panel);
+      overflow: hidden;
+    }
 
-      .nav-links {
-        gap: 14px;
-      }
+    .about-copy {
+      min-width: 0;
+    }
 
-      .nav-links a {
-        font-size: 9px;
-      }
+    .about-role {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--burgundy-soft);
+      margin-bottom: 22px;
+    }
 
-      .hero h1 {
-        font-size: 50px;
-      }
+    .about-name {
+      font-size: clamp(3rem, 5vw, 5.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin: 0 0 22px 0;
+    }
 
-      .hero p {
-        font-size: 14px;
-        line-height: 1.7;
-      }
+    .about-disciplines {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.98rem;
+      line-height: 1.8;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 44px;
+      max-width: 900px;
+    }
 
-      .intro {
-        padding: 100px 24px;
-      }
+    .about-body p {
+      font-size: clamp(1.8rem, 2.45vw, 3.25rem);
+      line-height: 1.35;
+      margin: 0 0 28px 0;
+      color: var(--text);
+    }
 
-      .intro h2 {
-        font-size: 38px;
-      }
+    .about-facts {
+      margin-top: 42px;
+      border-top: 1px solid var(--line);
+    }
 
-      .work {
-        padding: 100px 24px;
-      }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
 
-      .work-grid {
+    .contact-title {
+      font-size: clamp(2.4rem, 3vw, 4.3rem);
+      line-height: 1.05;
+      margin: 0 0 20px 0;
+    }
+
+    .contact-copy {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--muted);
+      max-width: 640px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding-top: 10px;
+    }
+
+    .contact-link {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 16px;
+      transition: color 0.2s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--burgundy-soft);
+    }
+
+    .footer {
+      padding: 24px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .footer-copy {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 1200px) {
+      .work-grid,
+      .studio-grid,
+      .about-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
-        gap: 70px;
-      }
-
-      .capabilities {
-        padding: 100px 24px;
-      }
-
-      .capabilities-heading {
-        font-size: 38px;
-        margin-bottom: 60px;
       }
 
       .capabilities-grid {
         grid-template-columns: 1fr;
       }
 
-      .founder {
-        padding: 100px 24px;
-      }
-
-      .founder-grid {
-        grid-template-columns: 1fr;
-        gap: 55px;
-      }
-
-      .founder-sticky {
+      .about-photo {
         position: static;
+        max-width: 760px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      :root {
+        --section-pad: 72px;
       }
 
-      .founder-image {
-        max-height: 680px;
+      .header-inner,
+      .container {
+        width: min(calc(100% - 36px), var(--max-width));
       }
 
-      .founder-name {
-        font-size: 40px;
+      .header-inner {
+        min-height: 78px;
+        align-items: flex-start;
+        padding: 18px 0;
+        flex-direction: column;
       }
 
-      .founder-copy p {
-        font-size: 21px;
+      .nav {
+        gap: 20px;
       }
 
-      .credential {
+      .work-grid {
         grid-template-columns: 1fr;
-        gap: 8px;
+      }
+
+      .capabilities-lead-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .about-body p {
+        font-size: clamp(1.4rem, 5vw, 2rem);
+        line-height: 1.5;
+      }
+
+      .hero-copy,
+      .capabilities-lead {
+        line-height: 1.02;
       }
     }
   </style>
 </head>
-
 <body>
-
-  <nav>
-    <div class="brand">HEMENT</div>
-
-    <div class="nav-links">
-      <a href="#work">WORK</a>
-      <a href="#">STUDIO</a>
-      <a href="#founder">ABOUT</a>
-      <a href="#">CONTACT</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="brand">Hement</a>
+      <nav class="nav">
+        <a href="#work">Work</a>
+        <a href="#capabilities">Studio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <section class="hero">
-    <h1>Hement Productions</h1>
-    <p>Music. Sound. Creative Technology.</p>
-  </section>
-
-  <section class="intro">
-    <p class="intro-label">ABOUT HEMENT</p>
-
-    <h2>
-      Independent creative production for music, sound,
-      visual culture and emerging interactive worlds.
-    </h2>
-  </section>
-
-  <section class="work" id="work">
-
-    <div class="section-top">
-      <p class="section-label">SELECTED WORK</p>
-      <span class="section-number">01 — 03</span>
-    </div>
-
-    <div class="work-grid">
-
-      <div class="project-card">
-        <a
-          class="project-image-link"
-          href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0w?si=5f85f4bda5cf4ab9"
-          target="_blank"
-          rel="noopener"
-        >
-          <div class="project-image euphoria-image">
-            <img
-              src="euphoria-cover.jpeg"
-              alt="Euphoria by Gold Soul Leo and Tita Boku"
-            >
-          </div>
-        </a>
-
-        <div class="project-info">
-          <p class="project-type">MUSIC / COLLABORATION</p>
-          <h3 class="project-title">Euphoria</h3>
-
-          <p class="project-credit">
-            Gold Soul Leo × Tita Boku
-          </p>
-
-          <p class="project-credit">
-            Songwriting · Vocals · Vocal Composition
-          </p>
-
-          <p class="project-label">
-            Released by
-            <a
-              class="label-link"
-              href="https://nexorarecords.fr/"
-              target="_blank"
-              rel="noopener"
-            >
-              Nexora Records
-            </a>
-          </p>
-
-          <a
-            class="project-action"
-            href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0w?si=5f85f4bda5cf4ab9"
-            target="_blank"
-            rel="noopener"
-          >
-            LISTEN ON SPOTIFY ↗
-          </a>
+  <main id="top">
+    <section class="hero-intro">
+      <div class="container">
+        <div class="hero-copy">
+          Music, sound, interdisciplinary work and emerging interactive worlds.
         </div>
       </div>
+    </section>
 
-      <div class="project-card">
-        <a
-          class="project-image-link"
-          href="https://www.youtube.com/watch?v=ct1WBP1bsjA"
-          target="_blank"
-          rel="noopener"
-        >
-          <div class="project-image ghost-image">
-            <img
-              src="ghost-forest.png"
-              alt="Ghost Forest interdisciplinary live performance featuring Rarrr"
-            >
-          </div>
-        </a>
+    <section id="work">
+      <div class="container">
+        <div class="section-label">Selected Work</div>
 
-        <div class="project-info">
-          <p class="project-type">LIVE / INTERDISCIPLINARY</p>
-          <h3 class="project-title">Ghost Forest</h3>
-
-          <p class="project-credit">
-            Featuring the climactic piece “Rarrr”
-          </p>
-
-          <p class="project-credit">
-            Composition · Lyrics · Vocal Composition ·
-            Electronic Production · Live Performance
-          </p>
-
-          <p class="project-label">
-            Performed live with the music ensemble alongside dancers
-            as part of an interdisciplinary work spanning dance,
-            music and sound, scenography, theatre production and film.
-          </p>
-
+        <div class="work-grid">
+          <!-- EUPHORIA -->
           <a
-            class="project-action"
+            class="project-card"
+            href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0W?si=5f85f4bda5cf4ab9"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="project-image">
+              <img src="euphoria-cover.jpeg" alt="Euphoria cover art" />
+            </div>
+
+            <div class="project-label">Music / Collaboration</div>
+            <h2 class="project-title">Euphoria</h2>
+            <div class="project-meta">Gold Soul Leo × Tita Boku</div>
+            <div class="project-desc">Songwriting · Vocals · Vocal Composition</div>
+            <div class="project-note">Released by Nexora Records</div>
+            <span class="project-link">Listen on Spotify ↗</span>
+          </a>
+
+          <!-- GHOST FOREST -->
+          <a
+            class="project-card"
             href="https://www.youtube.com/watch?v=ct1WBP1bsjA"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
-            WATCH PERFORMANCE ↗
+            <div class="project-image">
+              <img src="ghost-forest.png" alt="Ghost Forest performance still" />
+            </div>
+
+            <div class="project-label">Live / Interdisciplinary</div>
+            <h2 class="project-title">Ghost Forest</h2>
+            <div class="project-meta">Featuring the climactic piece “Rarrr”</div>
+            <div class="project-desc">
+              Composition · Lyrics · Vocal Composition · Electronic Production · Live Performance
+            </div>
+            <div class="project-note">
+              Created collaboratively within an interdisciplinary live performance environment.
+            </div>
+            <span class="project-link">Watch excerpt ↗</span>
           </a>
-        </div>
-      </div>
 
-      <div class="project-card">
-        <a
-          class="project-image-link"
-          href="https://open.spotify.com/album/2icrXpqQwYfkdkcs4aQ66h?si=6SrxCEhUTy-_kNOaMuQdhA"
-          target="_blank"
-          rel="noopener"
-        >
-          <div class="project-image blood-image">
-            <img
-              src="blood-drips.png"
-              alt="Blood Drips by Tita Boku"
-            >
-          </div>
-        </a>
-
-        <div class="project-info">
-          <p class="project-type">MUSIC / ORIGINAL RELEASE</p>
-          <h3 class="project-title">Blood Drips</h3>
-
-          <p class="project-credit">Tita Boku</p>
-
-          <p class="project-credit">
-            Music Production · Songwriting · Vocals
-          </p>
-
-          <p class="project-label">
-            Mixed by Ken Lewis
-          </p>
-
+          <!-- BLOOD DRIPS -->
           <a
-            class="project-action"
+            class="project-card"
             href="https://open.spotify.com/album/2icrXpqQwYfkdkcs4aQ66h?si=6SrxCEhUTy-_kNOaMuQdhA"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >
-            LISTEN ON SPOTIFY ↗
+            <div class="project-image">
+              <img src="blood-drips.png" alt="Blood Drips cover art" />
+            </div>
+
+            <div class="project-label">Music / Original Release</div>
+            <h2 class="project-title">Blood Drips</h2>
+            <div class="project-meta">Tita Boku</div>
+            <div class="project-desc">Music Production · Songwriting · Vocals</div>
+            <div class="project-note">Mixed by Ken Lewis</div>
+            <span class="project-link">Open on Spotify ↗</span>
           </a>
         </div>
       </div>
+    </section>
 
-    </div>
+    <section id="capabilities">
+      <div class="container">
+        <div class="section-label">Capabilities</div>
 
-  </section>
-
-  <section class="capabilities" id="capabilities">
-
-    <div class="section-top">
-      <p class="section-label">CAPABILITIES</p>
-      <span class="section-number">01 — 06</span>
-    </div>
-
-    <h2 class="capabilities-heading">
-      Sound, performance and technology shaped into experiences with a point of view.
-    </h2>
-
-    <div class="capabilities-grid">
-
-      <div class="capability">
-        <span class="capability-number">01</span>
-        <h3>Music Production</h3>
-        <p>
-          Original production, arrangement, songwriting and collaborative
-          development across recorded music and artist-led projects.
-        </p>
-      </div>
-
-      <div class="capability">
-        <span class="capability-number">02</span>
-        <h3>Vocals & Songwriting</h3>
-        <p>
-          Vocal composition, songwriting, recording, performance and
-          creative development shaped around the identity of each project.
-        </p>
-      </div>
-
-      <div class="capability">
-        <span class="capability-number">03</span>
-        <h3>Sound Design</h3>
-        <p>
-          Original sonic worlds for music, performance, visual work
-          and experimental media.
-        </p>
-      </div>
-
-      <div class="capability">
-        <span class="capability-number">04</span>
-        <h3>Live & Interdisciplinary</h3>
-        <p>
-          Music and sound developed in conversation with movement,
-          performance, projection, visual art and collaborative production.
-        </p>
-      </div>
-
-      <div class="capability">
-        <span class="capability-number">05</span>
-        <h3>Creative Technology</h3>
-        <p>
-          Experimental production, audiovisual systems, digital workflows
-          and emerging technologies used as creative tools.
-        </p>
-      </div>
-
-      <div class="capability">
-        <span class="capability-number">06</span>
-        <h3>
-          Interactive Worlds
-          <span class="emerging">EMERGING</span>
-        </h3>
-        <p>
-          An evolving practice spanning interactive experiences,
-          indie game development, world-building, music and sound.
-        </p>
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="founder" id="founder">
-
-    <div class="founder-grid">
-
-      <div class="founder-sticky">
-
-        <div class="founder-image">
-          <img
-            src="rohini-founder-photo.jpg"
-            alt="Rohini Soedhwa, founder of Hement Productions"
-          >
+        <div class="capabilities-lead-wrap">
+          <h2 class="capabilities-lead">
+            Sound, performance and technology shaped into experiences with a point of view.
+          </h2>
+          <div class="capabilities-number">01 — 06</div>
         </div>
 
-        <p class="founder-kicker">
-          FOUNDER / CREATIVE DIRECTOR
-        </p>
-
-        <h2 class="founder-name">
-          Rohini Soedhwa
-        </h2>
-
-        <p class="founder-role">
-          Music Producer · Songwriter · Vocalist · Sound Designer · Interdisciplinary Artist
-        </p>
-
-      </div>
-
-      <div class="founder-copy">
-
-        <p>
-          Hement Productions was founded by Rohini Soedhwa, also known through
-          her artist work as Tita Boku. Born in Paramaribo, Suriname and now
-          based in British Columbia, Rohini’s background and wide-ranging
-          musical influences have shaped an instinct for experimentation,
-          encouraging a practice that moves freely between genres,
-          technologies and forms of expression.
-        </p>
-
-        <p>
-          Her work moves between experimental electronic music, pop, hip-hop,
-          collaborative performance and visual culture, combining instinctive
-          songwriting and vocal work with layered electronic production,
-          sound design and a technically driven approach to creative practice.
-        </p>
-
-        <p>
-          Hement extends that practice into an evolving creative house for
-          music, interdisciplinary work and emerging interactive worlds —
-          with indie game development, world-building and new forms of
-          digital storytelling forming part of its next chapter.
-        </p>
-
-        <div class="credentials">
-
-          <div class="credential">
-            <span class="credential-label">Education</span>
-
-            <span class="credential-value">
-              BFA in Electroacoustic Music — Simon Fraser University,
-              School for the Contemporary Arts
-            </span>
+        <div class="capabilities-grid">
+          <div class="capability">
+            <span class="capability-number">01</span>
+            <h3 class="capability-title">Music Production</h3>
+            <div class="capability-desc">
+              Original production, arrangement, songwriting and collaborative development across recorded music and artist-led projects.
+            </div>
           </div>
 
-          <div class="credential">
-            <span class="credential-label">Practice</span>
-
-            <span class="credential-value">
-              Music Production · Songwriting · Sound Design ·
-              Live Performance · Creative Technology
-            </span>
+          <div class="capability">
+            <span class="capability-number">02</span>
+            <h3 class="capability-title">Vocals & Songwriting</h3>
+            <div class="capability-desc">
+              Vocal composition, topline writing, lyric writing, recording, performance and creative development shaped around the identity of each project.
+            </div>
           </div>
 
-          <div class="credential">
-            <span class="credential-label">Based</span>
-
-            <span class="credential-value">
-              British Columbia, Canada
-            </span>
+          <div class="capability">
+            <span class="capability-number">03</span>
+            <h3 class="capability-title">Sound Design</h3>
+            <div class="capability-desc">
+              Original sonic worlds for music, performance, visual work and experimental media, from texture and atmosphere to rhythm-forward design.
+            </div>
           </div>
 
+          <div class="capability">
+            <span class="capability-number">04</span>
+            <h3 class="capability-title">Live & Interdisciplinary</h3>
+            <div class="capability-desc">
+              Music and sound developed in conversation with movement, projection, theatre, visual art and collaborative production environments.
+            </div>
+          </div>
+
+          <div class="capability">
+            <span class="capability-number">05</span>
+            <h3 class="capability-title">Creative Technology</h3>
+            <div class="capability-desc">
+              Practice shaped through digital production, studio technology, experimental workflows and curiosity for new tools and hybrid forms.
+            </div>
+          </div>
+
+          <div class="capability">
+            <span class="capability-number">06</span>
+            <h3 class="capability-title">
+              Interactive Worlds <span class="capability-tag">Emerging</span>
+            </h3>
+            <div class="capability-desc">
+              A growing direction toward indie game development, world-building and interactive storytelling as part of Hement’s evolving creative future.
+            </div>
+          </div>
         </div>
-
       </div>
+    </section>
 
+    <section id="studio">
+      <div class="container">
+        <div class="section-label">Studio</div>
+
+        <div class="studio-grid">
+          <div class="studio-image-wrap">
+            <img
+              class="studio-image"
+              src="hement-studio.png"
+              alt="Hement Productions studio setup"
+            />
+          </div>
+
+          <div class="studio-copy">
+            <h2 class="studio-title">A working studio built for writing, sound and production.</h2>
+
+            <div class="studio-text">
+              Hement’s studio practice is grounded in hands-on making: composing, producing, recording, editing and shaping ideas from first sketch to finished form.
+            </div>
+
+            <div class="studio-text">
+              The space supports both intimate songwriting and more experimental sound work, with a workflow that moves fluidly between vocals, electronic production, sound design and collaborative development.
+            </div>
+
+            <div class="studio-text">
+              It is also the place where future directions are taking shape — including interactive audio, world-building and the early foundations of indie game development.
+            </div>
+
+            <div class="studio-details">
+              <div class="detail-row">
+                <div class="detail-label">Focus</div>
+                <div class="detail-value">
+                  Music production · Vocal production · Sound design · Recording · Creative experimentation
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">Workflow</div>
+                <div class="detail-value">
+                  Songwriting, composition, electronic production, editing, live-performance development and interdisciplinary collaboration
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">Direction</div>
+                <div class="detail-value">
+                  Expanding toward interactive audio, indie games and digital storytelling
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-photo">
+            <img src="rohini-founder-photo.jpg" alt="Portrait of Rohini Soedhwa" />
+          </div>
+
+          <div class="about-copy">
+            <div class="about-role">Founder / Creative Director</div>
+
+            <h2 class="about-name">Rohini Soedhwa</h2>
+
+            <div class="about-disciplines">
+              Music Producer · Songwriter · Vocalist · Sound Designer · Interdisciplinary Artist
+            </div>
+
+            <div class="about-body">
+              <p>
+                Hement Productions was founded by Rohini Soedhwa, also known through her artist work as Tita Boku. Born in Paramaribo, Suriname and now based in British Columbia, Rohini’s background and wide-ranging musical influences have shaped an instinct for experimentation, encouraging a practice that moves freely between genres, technologies and forms of expression.
+              </p>
+
+              <p>
+                Her work moves between experimental electronic music, pop, hip-hop, collaborative performance and visual culture, combining instinctive songwriting and vocal work with layered electronic production, sound design and a technically driven approach to creative practice.
+              </p>
+
+              <p>
+                Hement extends that practice into an evolving creative house for music, interdisciplinary work and emerging interactive worlds — with indie game development, world-building and new forms of digital storytelling forming part of its next chapter.
+              </p>
+            </div>
+
+            <div class="about-facts">
+              <div class="detail-row">
+                <div class="detail-label">Education</div>
+                <div class="detail-value">
+                  BFA in Electroacoustic Music — Simon Fraser University, School for the Contemporary Arts
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">Practice</div>
+                <div class="detail-value">
+                  Music Production · Songwriting · Sound Design · Live Performance · Creative Technology
+                </div>
+              </div>
+
+              <div class="detail-row">
+                <div class="detail-label">Based</div>
+                <div class="detail-value">British Columbia, Canada</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-label">Contact</div>
+
+        <div class="contact-grid">
+          <div>
+            <h2 class="contact-title">Let’s build something with a pulse.</h2>
+            <div class="contact-copy">
+              Hement Productions is open to conversations around music production, songwriting, interdisciplinary collaboration, sound design and future-facing creative work.
+            </div>
+          </div>
+
+          <div class="contact-links">
+            <!-- Replace these with your real links / email -->
+            <a class="contact-link" href="mailto:your@email.com">Email</a>
+            <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer">Spotify</a>
+            <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-copy">
+        © 2026 Hement Productions
+      </div>
     </div>
-
-  </section>
-
+  </footer>
 </body>
-
 </html>
