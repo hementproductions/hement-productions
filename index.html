@@ -1,124 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Hement Productions</title>
 
   <style>
+
     body {
       margin: 0;
-      min-height: 100vh;
       background: #0b0b0b;
       color: #f3eee8;
       font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      box-sizing: border-box;
+
+      padding: 28px 40px;
+
       display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      z-index: 100;
+
+      background: #0b0b0b;
+    }
+
+    .brand {
+      font-size: 14px;
+      letter-spacing: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #c7c0bb;
+      text-decoration: none;
+
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+
+      padding: 40px;
+      box-sizing: border-box;
+
+      display: flex;
+      flex-direction: column;
+
       align-items: center;
       justify-content: center;
+
       text-align: center;
     }
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 28px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.brand {
-  font-size: 14px;
-  letter-spacing: 4px;
-}
+    .hero h1 {
+      font-family: Georgia, "Times New Roman", serif;
 
-.nav-links {
-  display: flex;
-  gap: 30px;
-}
+      font-size: 82px;
+      font-weight: 400;
 
-.nav-links a {
-  color: #c7c0bb;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-    .hero {
-      padding: 40px;
+      letter-spacing: -2px;
+
+      margin: 0 0 24px;
     }
 
-h1 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 82px;
-  font-weight: 400;
-  letter-spacing: -2px;
-  margin: 0 0 24px;
-}
-
-    p {
+    .hero p {
       font-size: 20px;
       letter-spacing: 3px;
+
       color: #c7c0bb;
+
       margin: 0;
-      .intro {
-  min-height: 100vh;
-  padding: 120px 8%;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  border-top: 1px solid #242424;
-}
-
-.intro-label {
-  font-size: 11px;
-  letter-spacing: 4px;
-  color: #7a3038;
-  margin-bottom: 35px;
-}
-
-.intro h2 {
-  max-width: 1100px;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 58px;
-  line-height: 1.15;
-  font-weight: 400;
-  letter-spacing: -1px;
-  margin: 0;
-  color: #f3eee8;
-}
     }
+
+
+    /* ABOUT INTRO */
+
+    .intro {
+      min-height: 100vh;
+
+      padding: 120px 8%;
+      box-sizing: border-box;
+
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+
+      border-top: 1px solid #242424;
+    }
+
+    .intro-label {
+      font-size: 11px;
+      letter-spacing: 4px;
+
+      color: #7a3038;
+
+      margin: 0 0 35px;
+    }
+
+    .intro h2 {
+      max-width: 1100px;
+
+      font-family: Georgia, "Times New Roman", serif;
+
+      font-size: 58px;
+      line-height: 1.15;
+
+      font-weight: 400;
+
+      letter-spacing: -1px;
+
+      margin: 0;
+
+      color: #f3eee8;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+      nav {
+        padding: 24px;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .nav-links a {
+        font-size: 9px;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .hero p {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+
+      .intro {
+        padding: 100px 24px;
+      }
+
+      .intro h2 {
+        font-size: 38px;
+      }
+
+    }
+
   </style>
 </head>
+
 
 <body>
 
   <nav>
-    <div class="brand">HEMENT</div>
+
+    <div class="brand">
+      HEMENT
+    </div>
 
     <div class="nav-links">
+
       <a href="#">WORK</a>
+
       <a href="#">STUDIO</a>
-      <a href="#">ABOUT</a>
+
+      <a href="#about">ABOUT</a>
+
       <a href="#">CONTACT</a>
+
     </div>
+
   </nav>
 
-  <section class="hero">
-    <section class="intro">
-  <p class="intro-label">ABOUT HEMENT</p>
 
-  <h2>
-    Independent creative production for music, sound,
-    visual culture and emerging interactive worlds.
-  </h2>
-</section>
-    <h1>Hement Productions</h1>
-    <p>Music. Sound. Creative Technology.</p>
+  <section class="hero">
+
+    <h1>
+      Hement Productions
+    </h1>
+
+    <p>
+      Music. Sound. Creative Technology.
+    </p>
+
   </section>
 
+
+  <section class="intro" id="about">
+
+    <p class="intro-label">
+      ABOUT HEMENT
+    </p>
+
+    <h2>
+      Independent creative production for music, sound,
+      visual culture and emerging interactive worlds.
+    </h2>
+
+  </section>
+
+
 </body>
+
 </html>
