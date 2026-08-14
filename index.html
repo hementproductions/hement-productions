@@ -240,8 +240,6 @@
       color: #b04b5a;
     }
 
-    /* CAPABILITIES */
-
     .capabilities {
       padding: 150px 6%;
       box-sizing: border-box;
@@ -301,6 +299,109 @@
       vertical-align: middle;
     }
 
+    /* ABOUT / FOUNDER */
+
+    .founder {
+      padding: 150px 6%;
+      box-sizing: border-box;
+      border-top: 1px solid #242424;
+    }
+
+    .founder-grid {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1.2fr);
+      gap: 90px;
+      align-items: start;
+    }
+
+    .founder-visual {
+      position: sticky;
+      top: 110px;
+    }
+
+    .founder-image {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #161616;
+      border: 1px solid #242424;
+    }
+
+    .founder-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+    }
+
+    .founder-kicker {
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: #b04b5a;
+      margin: 0 0 24px;
+    }
+
+    .founder-name {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 50px;
+      line-height: 1.05;
+      font-weight: 400;
+      letter-spacing: -1px;
+      margin: 0 0 16px;
+    }
+
+    .founder-role {
+      margin: 0 0 50px;
+      font-size: 12px;
+      line-height: 1.8;
+      letter-spacing: 2px;
+      color: #8f8884;
+      text-transform: uppercase;
+    }
+
+    .founder-copy {
+      max-width: 900px;
+    }
+
+    .founder-copy p {
+      margin: 0 0 28px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      line-height: 1.5;
+      color: #d7d0cb;
+    }
+
+    .founder-copy p:last-of-type {
+      margin-bottom: 55px;
+    }
+
+    .credentials {
+      border-top: 1px solid #242424;
+    }
+
+    .credential {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 30px;
+      padding: 18px 0;
+      border-bottom: 1px solid #242424;
+    }
+
+    .credential-label {
+      font-size: 9px;
+      letter-spacing: 3px;
+      color: #b04b5a;
+      text-transform: uppercase;
+    }
+
+    .credential-value {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      line-height: 1.7;
+      color: #9a928d;
+    }
+
     @media (max-width: 900px) {
 
       nav {
@@ -353,6 +454,36 @@
       .capabilities-grid {
         grid-template-columns: 1fr;
       }
+
+      .founder {
+        padding: 100px 24px;
+      }
+
+      .founder-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .founder-visual {
+        position: static;
+      }
+
+      .founder-image {
+        max-height: 680px;
+      }
+
+      .founder-name {
+        font-size: 42px;
+      }
+
+      .founder-copy p {
+        font-size: 22px;
+      }
+
+      .credential {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
     }
   </style>
 </head>
@@ -365,7 +496,7 @@
     <div class="nav-links">
       <a href="#work">WORK</a>
       <a href="#">STUDIO</a>
-      <a href="#about">ABOUT</a>
+      <a href="#founder">ABOUT</a>
       <a href="#">CONTACT</a>
     </div>
   </nav>
@@ -375,7 +506,7 @@
     <p>Music. Sound. Creative Technology.</p>
   </section>
 
-  <section class="intro" id="about">
+  <section class="intro">
     <p class="intro-label">ABOUT HEMENT</p>
 
     <h2>
@@ -392,8 +523,6 @@
     </div>
 
     <div class="work-grid">
-
-      <!-- EUPHORIA -->
 
       <div class="project-card">
 
@@ -448,8 +577,6 @@
 
       </div>
 
-      <!-- GHOST FOREST -->
-
       <div class="project-card">
 
         <a
@@ -497,8 +624,6 @@
         </div>
 
       </div>
-
-      <!-- BLOOD DRIPS -->
 
       <div class="project-card">
 
@@ -548,8 +673,6 @@
     </div>
 
   </section>
-
-  <!-- CAPABILITIES -->
 
   <section class="capabilities" id="capabilities">
 
@@ -619,6 +742,94 @@
           An evolving practice spanning interactive experiences,
           indie game development, world-building, music and sound.
         </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="founder" id="founder">
+
+    <div class="founder-grid">
+
+      <div class="founder-visual">
+        <div class="founder-image">
+          <img
+            src="rohini-founder.jpg"
+            alt="Rohini Soedhwa, founder of Hement Productions"
+          >
+        </div>
+      </div>
+
+      <div>
+
+        <p class="founder-kicker">
+          FOUNDER / CREATIVE DIRECTOR
+        </p>
+
+        <h2 class="founder-name">
+          Rohini Soedhwa
+        </h2>
+
+        <p class="founder-role">
+          Music Producer · Songwriter · Vocalist · Sound Designer · Interdisciplinary Artist
+        </p>
+
+        <div class="founder-copy">
+
+          <p>
+            Hement Productions was founded by Rohini Soedhwa, also known through
+            her artist work as Tita Boku. Born in Paramaribo, Suriname and now
+            based in British Columbia, Rohini brings an Indo-Caribbean perspective
+            to a practice spanning music, sound, live performance and creative technology.
+          </p>
+
+          <p>
+            Her work moves between experimental electronic music, pop, hip-hop,
+            collaborative performance and visual culture, combining instinctive
+            songwriting and vocal work with layered electronic production,
+            sound design and a technically driven approach to creative practice.
+          </p>
+
+          <p>
+            Hement extends that practice into an evolving creative house for
+            music, interdisciplinary work and emerging interactive worlds —
+            with indie game development, world-building and new forms of
+            digital storytelling forming part of its next chapter.
+          </p>
+
+          <div class="credentials">
+
+            <div class="credential">
+              <span class="credential-label">Education</span>
+
+              <span class="credential-value">
+                BFA in Electroacoustic Music — Simon Fraser University,
+                School for the Contemporary Arts
+              </span>
+            </div>
+
+            <div class="credential">
+              <span class="credential-label">Practice</span>
+
+              <span class="credential-value">
+                Music Production · Songwriting · Sound Design ·
+                Live Performance · Creative Technology
+              </span>
+            </div>
+
+            <div class="credential">
+              <span class="credential-label">Based</span>
+
+              <span class="credential-value">
+                British Columbia, Canada
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </div>
