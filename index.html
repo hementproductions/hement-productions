@@ -20,45 +20,55 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hementproductions.com/" />
+
   <meta
     property="og:title"
     content="Hement Productions | Music, Sound & Creative Technology"
   />
+
   <meta
     property="og:description"
     content="Independent creative production across music, sound, interdisciplinary performance and emerging interactive worlds."
   />
+
   <meta
     property="og:image"
     content="https://hementproductions.com/hement-social-preview.png"
   />
+
   <meta
     property="og:image:alt"
     content="Hement Productions — Music. Sound. Creative Technology."
   />
+
   <meta property="og:site_name" content="Hement Productions" />
 
   <!-- TWITTER / X PREVIEW -->
 
   <meta name="twitter:card" content="summary_large_image" />
+
   <meta
     name="twitter:title"
     content="Hement Productions | Music, Sound & Creative Technology"
   />
+
   <meta
     name="twitter:description"
     content="Independent creative production across music, sound, interdisciplinary performance and emerging interactive worlds."
   />
+
   <meta
     name="twitter:image"
     content="https://hementproductions.com/hement-social-preview.png"
   />
+
   <meta
     name="twitter:image:alt"
     content="Hement Productions — Music. Sound. Creative Technology."
   />
 
   <style>
+
     :root {
       --bg: #050505;
       --panel: #0d0d0f;
@@ -104,13 +114,15 @@
       margin: 0 auto;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(5, 5, 5, 0.94);
+      background: rgba(5,5,5,0.94);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(255,255,255,0.03);
     }
@@ -168,7 +180,9 @@
       margin-bottom: 40px;
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: calc(100vh - 88px);
@@ -205,7 +219,9 @@
       color: var(--muted);
     }
 
-    /* WORK */
+    /* =========================
+       SELECTED WORK
+    ========================= */
 
     .work-grid {
       display: grid;
@@ -215,6 +231,11 @@
     }
 
     .project-card {
+      display: block;
+      min-width: 0;
+    }
+
+    .project-image-link {
       display: block;
     }
 
@@ -249,7 +270,7 @@
     .project-title {
       font-size: clamp(2rem, 2.2vw, 3.3rem);
       line-height: 1.02;
-      margin: 0 0 12px 0;
+      margin: 0 0 12px;
       color: var(--text);
     }
 
@@ -300,7 +321,9 @@
       color: var(--burgundy);
     }
 
-    /* CAPABILITIES */
+    /* =========================
+       CAPABILITIES
+    ========================= */
 
     .capabilities-lead-wrap {
       display: grid;
@@ -352,7 +375,7 @@
     .capability-title {
       font-size: clamp(2rem, 2.5vw, 3.5rem);
       line-height: 1.05;
-      margin: 0 0 16px 0;
+      margin: 0 0 16px;
     }
 
     .capability-desc {
@@ -374,7 +397,9 @@
       white-space: nowrap;
     }
 
-    /* STUDIO */
+    /* =========================
+       STUDIO
+    ========================= */
 
     .studio-grid {
       display: grid;
@@ -405,7 +430,7 @@
     .studio-title {
       font-size: clamp(2.3rem, 3vw, 4rem);
       line-height: 1.03;
-      margin: 0 0 20px 0;
+      margin: 0 0 20px;
     }
 
     .studio-text {
@@ -445,7 +470,9 @@
       color: var(--muted);
     }
 
-    /* ABOUT */
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about-grid {
       display: grid;
@@ -480,7 +507,7 @@
       font-size: clamp(3rem, 5vw, 5.4rem);
       line-height: 0.98;
       letter-spacing: -0.03em;
-      margin: 0 0 22px 0;
+      margin: 0 0 22px;
     }
 
     .about-disciplines {
@@ -497,7 +524,7 @@
     .about-body p {
       font-size: clamp(1.55rem, 2vw, 2.65rem);
       line-height: 1.45;
-      margin: 0 0 28px 0;
+      margin: 0 0 28px;
       color: var(--text);
     }
 
@@ -506,7 +533,9 @@
       border-top: 1px solid var(--line);
     }
 
-    /* CONTACT */
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact-grid {
       display: grid;
@@ -518,7 +547,7 @@
     .contact-title {
       font-size: clamp(2.4rem, 3vw, 4.3rem);
       line-height: 1.05;
-      margin: 0 0 20px 0;
+      margin: 0 0 20px;
     }
 
     .contact-copy {
@@ -551,7 +580,9 @@
       color: var(--burgundy);
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     .footer {
       padding: 24px 0 40px;
@@ -565,9 +596,12 @@
       letter-spacing: 0.08em;
     }
 
-    /* RESPONSIVE */
+    /* =========================
+       RESPONSIVE
+    ========================= */
 
     @media (max-width: 1200px) {
+
       .work-grid,
       .studio-grid,
       .about-grid,
@@ -590,6 +624,7 @@
     }
 
     @media (max-width: 860px) {
+
       :root {
         --section-pad: 72px;
       }
@@ -642,14 +677,18 @@
         line-height: 1.5;
       }
     }
+
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================== -->
 
   <header class="site-header">
+
     <div class="header-inner">
 
       <a href="#top" class="brand">
@@ -664,13 +703,18 @@
       </nav>
 
     </div>
+
   </header>
+
 
   <main id="top">
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <section class="hero">
+
       <div class="container hero-inner">
 
         <h1>
@@ -682,11 +726,16 @@
         </p>
 
       </div>
+
     </section>
 
-    <!-- SELECTED WORK -->
+
+    <!-- =========================
+         SELECTED WORK
+    ========================== -->
 
     <section id="work">
+
       <div class="container">
 
         <div class="section-label">
@@ -695,21 +744,28 @@
 
         <div class="work-grid">
 
+
           <!-- EUPHORIA -->
 
-          <a
-            class="project-card"
-            href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0w?si=5f85f4bda5cf4ab9"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <div class="project-card">
 
-            <div class="project-image">
-              <img
-                src="euphoria-cover.jpeg"
-                alt="Euphoria cover art"
-              />
-            </div>
+            <a
+              class="project-image-link"
+              href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0w?si=5f85f4bda5cf4ab9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <div class="project-image">
+
+                <img
+                  src="euphoria-cover.jpeg"
+                  alt="Euphoria cover art"
+                />
+
+              </div>
+
+            </a>
 
             <div class="project-label">
               Music / Collaboration
@@ -728,7 +784,9 @@
             </div>
 
             <div class="project-note">
+
               Released by
+
               <a
                 href="https://nexorarecords.fr/"
                 target="_blank"
@@ -736,13 +794,20 @@
               >
                 Nexora Records ↗
               </a>
+
             </div>
 
-            <span class="project-link">
+            <a
+              class="project-link"
+              href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0w?si=5f85f4bda5cf4ab9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Listen on Spotify ↗
-            </span>
+            </a>
 
-          </a>
+          </div>
+
 
           <!-- GHOST FOREST -->
 
@@ -754,10 +819,12 @@
           >
 
             <div class="project-image">
+
               <img
                 src="ghost-forest.png"
                 alt="Ghost Forest performance still"
               />
+
             </div>
 
             <div class="project-label">
@@ -787,6 +854,7 @@
 
           </a>
 
+
           <!-- BLOOD DRIPS -->
 
           <a
@@ -797,10 +865,12 @@
           >
 
             <div class="project-image">
+
               <img
                 src="blood-drips.png"
                 alt="Blood Drips cover art"
               />
+
             </div>
 
             <div class="project-label">
@@ -829,13 +899,20 @@
 
           </a>
 
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- CAPABILITIES -->
+
+    <!-- =========================
+         CAPABILITIES
+    ========================== -->
 
     <section id="capabilities">
+
       <div class="container">
 
         <div class="section-label">
@@ -854,10 +931,15 @@
 
         </div>
 
+
         <div class="capabilities-grid">
 
+
           <div class="capability">
-            <span class="capability-number">01</span>
+
+            <span class="capability-number">
+              01
+            </span>
 
             <h3 class="capability-title">
               Music Production
@@ -867,10 +949,15 @@
               Original production, arrangement, songwriting and collaborative
               development across recorded music and artist-led projects.
             </div>
+
           </div>
 
+
           <div class="capability">
-            <span class="capability-number">02</span>
+
+            <span class="capability-number">
+              02
+            </span>
 
             <h3 class="capability-title">
               Vocals & Songwriting
@@ -881,10 +968,15 @@
               performance and creative development shaped around the identity
               of each project.
             </div>
+
           </div>
 
+
           <div class="capability">
-            <span class="capability-number">03</span>
+
+            <span class="capability-number">
+              03
+            </span>
 
             <h3 class="capability-title">
               Sound Design
@@ -894,10 +986,15 @@
               Original sonic worlds for music, performance, visual work and
               experimental media, from texture and atmosphere to rhythm-forward design.
             </div>
+
           </div>
 
+
           <div class="capability">
-            <span class="capability-number">04</span>
+
+            <span class="capability-number">
+              04
+            </span>
 
             <h3 class="capability-title">
               Live & Interdisciplinary
@@ -907,10 +1004,15 @@
               Music and sound developed in conversation with movement,
               projection, theatre, visual art and collaborative production environments.
             </div>
+
           </div>
 
+
           <div class="capability">
-            <span class="capability-number">05</span>
+
+            <span class="capability-number">
+              05
+            </span>
 
             <h3 class="capability-title">
               Creative Technology
@@ -920,31 +1022,47 @@
               Practice shaped through digital production, studio technology,
               experimental workflows and curiosity for new tools and hybrid forms.
             </div>
+
           </div>
 
+
           <div class="capability">
-            <span class="capability-number">06</span>
+
+            <span class="capability-number">
+              06
+            </span>
 
             <h3 class="capability-title">
+
               Interactive Worlds
+
               <span class="capability-tag">
                 Emerging
               </span>
+
             </h3>
 
             <div class="capability-desc">
               A growing direction toward indie game development, world-building
               and interactive storytelling as part of Hement’s evolving creative future.
             </div>
+
           </div>
 
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- STUDIO -->
+
+    <!-- =========================
+         STUDIO
+    ========================== -->
 
     <section id="studio">
+
       <div class="container">
 
         <div class="section-label">
@@ -954,12 +1072,15 @@
         <div class="studio-grid">
 
           <div class="studio-image-wrap">
+
             <img
               class="studio-image"
               src="hement-studio.png"
               alt="Hement Productions recording and production studio"
             />
+
           </div>
+
 
           <div class="studio-copy">
 
@@ -986,9 +1107,12 @@
               foundations of indie game development.
             </div>
 
+
             <div class="studio-details">
 
+
               <div class="detail-row">
+
                 <div class="detail-label">
                   Focus
                 </div>
@@ -997,9 +1121,12 @@
                   Music production · Vocal production · Sound design ·
                   Recording · Creative experimentation
                 </div>
+
               </div>
 
+
               <div class="detail-row">
+
                 <div class="detail-label">
                   Workflow
                 </div>
@@ -1008,9 +1135,12 @@
                   Songwriting, composition, electronic production, editing,
                   live-performance development and interdisciplinary collaboration
                 </div>
+
               </div>
 
+
               <div class="detail-row">
+
                 <div class="detail-label">
                   Direction
                 </div>
@@ -1018,29 +1148,41 @@
                 <div class="detail-value">
                   Expanding toward interactive audio, indie games and digital storytelling
                 </div>
+
               </div>
+
 
             </div>
 
           </div>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- ABOUT -->
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
 
     <section id="about">
+
       <div class="container">
 
         <div class="about-grid">
 
+
           <div class="about-photo">
+
             <img
               src="rohini-founder-photo.jpg"
               alt="Portrait of Rohini Soedhwa"
             />
+
           </div>
+
 
           <div class="about-copy">
 
@@ -1056,6 +1198,7 @@
               Music Producer · Songwriter · Vocalist · Sound Designer ·
               Interdisciplinary Artist
             </div>
+
 
             <div class="about-body">
 
@@ -1085,9 +1228,12 @@
 
             </div>
 
+
             <div class="about-facts">
 
+
               <div class="detail-row">
+
                 <div class="detail-label">
                   Education
                 </div>
@@ -1096,9 +1242,12 @@
                   BFA in Electroacoustic Music — Simon Fraser University,
                   School for the Contemporary Arts
                 </div>
+
               </div>
 
+
               <div class="detail-row">
+
                 <div class="detail-label">
                   Practice
                 </div>
@@ -1107,9 +1256,12 @@
                   Music Production · Songwriting · Sound Design ·
                   Live Performance · Creative Technology
                 </div>
+
               </div>
 
+
               <div class="detail-row">
+
                 <div class="detail-label">
                   Based
                 </div>
@@ -1117,19 +1269,27 @@
                 <div class="detail-value">
                   British Columbia, Canada
                 </div>
+
               </div>
+
 
             </div>
 
           </div>
 
         </div>
+
       </div>
+
     </section>
 
-    <!-- CONTACT -->
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
 
     <section id="contact">
+
       <div class="container">
 
         <div class="section-label">
@@ -1137,6 +1297,7 @@
         </div>
 
         <div class="contact-grid">
+
 
           <div>
 
@@ -1151,6 +1312,7 @@
             </div>
 
           </div>
+
 
           <div class="contact-links">
 
@@ -1190,15 +1352,22 @@
 
           </div>
 
+
         </div>
+
       </div>
+
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer class="footer">
+
     <div class="container">
 
       <div class="footer-copy">
@@ -1206,6 +1375,7 @@
       </div>
 
     </div>
+
   </footer>
 
 </body>
