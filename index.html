@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Hement Productions</title>
+
   <meta
     name="description"
     content="Hement Productions is an evolving creative house for music, interdisciplinary work, sound design and emerging interactive worlds."
@@ -13,12 +15,10 @@
     :root {
       --bg: #050505;
       --panel: #0d0d0f;
-      --panel-2: #111114;
       --line: rgba(255,255,255,0.08);
       --text: #f2ece6;
       --muted: #b6aaa1;
-      --burgundy: #a33b4f;
-      --burgundy-soft: #b04b60;
+      --burgundy: #b04b60;
       --max-width: 1640px;
       --section-pad: 88px;
       --grid-gap: 32px;
@@ -57,11 +57,13 @@
       margin: 0 auto;
     }
 
+    /* HEADER */
+
     .site-header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(5, 5, 5, 0.92);
+      background: rgba(5, 5, 5, 0.94);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(255,255,255,0.03);
     }
@@ -102,7 +104,7 @@
     }
 
     .nav a:hover {
-      color: var(--burgundy-soft);
+      color: var(--burgundy);
     }
 
     section {
@@ -115,22 +117,35 @@
       font-size: 0.92rem;
       letter-spacing: 0.35em;
       text-transform: uppercase;
-      color: var(--burgundy-soft);
+      color: var(--burgundy);
       margin-bottom: 40px;
     }
 
+    /* HERO */
+
     .hero-intro {
-      padding-top: 56px;
-      padding-bottom: 48px;
+      padding-top: 95px;
+      padding-bottom: 110px;
+    }
+
+    .hero-brand {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--burgundy);
+      margin-bottom: 32px;
     }
 
     .hero-copy {
-      max-width: 1100px;
-      font-size: clamp(2.8rem, 5vw, 6rem);
+      max-width: 1250px;
+      font-size: clamp(3.4rem, 5.4vw, 6.2rem);
       line-height: 0.98;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.035em;
       color: var(--text);
     }
+
+    /* WORK */
 
     .work-grid {
       display: grid;
@@ -167,7 +182,7 @@
       font-size: 0.92rem;
       letter-spacing: 0.33em;
       text-transform: uppercase;
-      color: var(--burgundy-soft);
+      color: var(--burgundy);
       margin-bottom: 12px;
     }
 
@@ -213,8 +228,10 @@
     }
 
     .project-link:hover {
-      color: var(--burgundy-soft);
+      color: var(--burgundy);
     }
+
+    /* CAPABILITIES */
 
     .capabilities-lead-wrap {
       display: grid;
@@ -236,8 +253,8 @@
 
     .capabilities-lead {
       max-width: 1200px;
-      font-size: clamp(2.8rem, 5vw, 5.7rem);
-      line-height: 0.98;
+      font-size: clamp(2.6rem, 4.5vw, 5.1rem);
+      line-height: 1;
       letter-spacing: -0.035em;
       margin: 0;
     }
@@ -259,7 +276,7 @@
       font-size: 0.92rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: var(--burgundy-soft);
+      color: var(--burgundy);
       margin-bottom: 18px;
     }
 
@@ -282,11 +299,13 @@
       font-size: 0.78rem;
       letter-spacing: 0.34em;
       text-transform: uppercase;
-      color: var(--burgundy-soft);
+      color: var(--burgundy);
       margin-left: 14px;
       vertical-align: middle;
       white-space: nowrap;
     }
+
+    /* STUDIO */
 
     .studio-grid {
       display: grid;
@@ -296,6 +315,9 @@
     }
 
     .studio-image-wrap {
+      position: sticky;
+      top: 116px;
+      align-self: start;
       border: 1px solid rgba(255,255,255,0.06);
       background: var(--panel);
       overflow: hidden;
@@ -303,7 +325,7 @@
 
     .studio-image {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
     }
 
@@ -312,7 +334,7 @@
     }
 
     .studio-title {
-      font-size: clamp(2.4rem, 3vw, 4.2rem);
+      font-size: clamp(2.3rem, 3vw, 4rem);
       line-height: 1.03;
       margin: 0 0 20px 0;
     }
@@ -344,7 +366,7 @@
       font-size: 0.9rem;
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: var(--burgundy-soft);
+      color: var(--burgundy);
     }
 
     .detail-value {
@@ -353,6 +375,8 @@
       line-height: 1.75;
       color: var(--muted);
     }
+
+    /* ABOUT */
 
     .about-grid {
       display: grid;
@@ -379,7 +403,7 @@
       font-size: 0.95rem;
       letter-spacing: 0.34em;
       text-transform: uppercase;
-      color: var(--burgundy-soft);
+      color: var(--burgundy);
       margin-bottom: 22px;
     }
 
@@ -402,8 +426,8 @@
     }
 
     .about-body p {
-      font-size: clamp(1.8rem, 2.45vw, 3.25rem);
-      line-height: 1.35;
+      font-size: clamp(1.55rem, 2vw, 2.65rem);
+      line-height: 1.45;
       margin: 0 0 28px 0;
       color: var(--text);
     }
@@ -412,6 +436,8 @@
       margin-top: 42px;
       border-top: 1px solid var(--line);
     }
+
+    /* CONTACT */
 
     .contact-grid {
       display: grid;
@@ -453,7 +479,7 @@
     }
 
     .contact-link:hover {
-      color: var(--burgundy-soft);
+      color: var(--burgundy);
     }
 
     .footer {
@@ -468,6 +494,8 @@
       letter-spacing: 0.08em;
     }
 
+    /* RESPONSIVE */
+
     @media (max-width: 1200px) {
       .work-grid,
       .studio-grid,
@@ -480,8 +508,12 @@
         grid-template-columns: 1fr;
       }
 
+      .studio-image-wrap,
       .about-photo {
         position: static;
+      }
+
+      .about-photo {
         max-width: 760px;
       }
     }
@@ -520,314 +552,567 @@
         gap: 10px;
       }
 
-      .about-body p {
-        font-size: clamp(1.4rem, 5vw, 2rem);
-        line-height: 1.5;
+      .hero-copy {
+        font-size: clamp(2.8rem, 9vw, 4.5rem);
       }
 
-      .hero-copy,
-      .capabilities-lead {
-        line-height: 1.02;
+      .about-body p {
+        font-size: clamp(1.35rem, 5vw, 2rem);
+        line-height: 1.5;
       }
     }
   </style>
 </head>
+
 <body>
+
   <header class="site-header">
     <div class="header-inner">
-      <a href="#top" class="brand">Hement</a>
+
+      <a href="#top" class="brand">
+        Hement
+      </a>
+
       <nav class="nav">
         <a href="#work">Work</a>
-        <a href="#capabilities">Studio</a>
+        <a href="#studio">Studio</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
+
     </div>
   </header>
 
   <main id="top">
+
+    <!-- HERO -->
+
     <section class="hero-intro">
       <div class="container">
+
+        <div class="hero-brand">
+          Hement Productions
+        </div>
+
         <div class="hero-copy">
           Music, sound, interdisciplinary work and emerging interactive worlds.
         </div>
+
       </div>
     </section>
 
+    <!-- SELECTED WORK -->
+
     <section id="work">
       <div class="container">
-        <div class="section-label">Selected Work</div>
+
+        <div class="section-label">
+          Selected Work
+        </div>
 
         <div class="work-grid">
+
           <!-- EUPHORIA -->
+
           <a
             class="project-card"
             href="https://open.spotify.com/track/4mZknprXliBdtfbj6Hgu0W?si=5f85f4bda5cf4ab9"
             target="_blank"
             rel="noopener noreferrer"
           >
+
             <div class="project-image">
-              <img src="euphoria-cover.jpeg" alt="Euphoria cover art" />
+              <img
+                src="euphoria-cover.jpeg"
+                alt="Euphoria cover art"
+              />
             </div>
 
-            <div class="project-label">Music / Collaboration</div>
-            <h2 class="project-title">Euphoria</h2>
-            <div class="project-meta">Gold Soul Leo × Tita Boku</div>
-            <div class="project-desc">Songwriting · Vocals · Vocal Composition</div>
-            <div class="project-note">Released by Nexora Records</div>
-            <span class="project-link">Listen on Spotify ↗</span>
+            <div class="project-label">
+              Music / Collaboration
+            </div>
+
+            <h2 class="project-title">
+              Euphoria
+            </h2>
+
+            <div class="project-meta">
+              Gold Soul Leo × Tita Boku
+            </div>
+
+            <div class="project-desc">
+              Songwriting · Vocals · Vocal Composition
+            </div>
+
+            <div class="project-note">
+              Released by Nexora Records
+            </div>
+
+            <span class="project-link">
+              Listen on Spotify ↗
+            </span>
+
           </a>
 
           <!-- GHOST FOREST -->
+
           <a
             class="project-card"
             href="https://www.youtube.com/watch?v=ct1WBP1bsjA"
             target="_blank"
             rel="noopener noreferrer"
           >
+
             <div class="project-image">
-              <img src="ghost-forest.png" alt="Ghost Forest performance still" />
+              <img
+                src="ghost-forest.png"
+                alt="Ghost Forest performance still"
+              />
             </div>
 
-            <div class="project-label">Live / Interdisciplinary</div>
-            <h2 class="project-title">Ghost Forest</h2>
-            <div class="project-meta">Featuring the climactic piece “Rarrr”</div>
-            <div class="project-desc">
-              Composition · Lyrics · Vocal Composition · Electronic Production · Live Performance
+            <div class="project-label">
+              Live / Interdisciplinary
             </div>
+
+            <h2 class="project-title">
+              Ghost Forest
+            </h2>
+
+            <div class="project-meta">
+              Featuring the climactic piece “Rarrr”
+            </div>
+
+            <div class="project-desc">
+              Composition · Lyrics · Vocal Composition ·
+              Electronic Production · Live Performance
+            </div>
+
             <div class="project-note">
               Created collaboratively within an interdisciplinary live performance environment.
             </div>
-            <span class="project-link">Watch excerpt ↗</span>
+
+            <span class="project-link">
+              Watch excerpt ↗
+            </span>
+
           </a>
 
           <!-- BLOOD DRIPS -->
+
           <a
             class="project-card"
             href="https://open.spotify.com/album/2icrXpqQwYfkdkcs4aQ66h?si=6SrxCEhUTy-_kNOaMuQdhA"
             target="_blank"
             rel="noopener noreferrer"
           >
+
             <div class="project-image">
-              <img src="blood-drips.png" alt="Blood Drips cover art" />
+              <img
+                src="blood-drips.png"
+                alt="Blood Drips cover art"
+              />
             </div>
 
-            <div class="project-label">Music / Original Release</div>
-            <h2 class="project-title">Blood Drips</h2>
-            <div class="project-meta">Tita Boku</div>
-            <div class="project-desc">Music Production · Songwriting · Vocals</div>
-            <div class="project-note">Mixed by Ken Lewis</div>
-            <span class="project-link">Open on Spotify ↗</span>
+            <div class="project-label">
+              Music / Original Release
+            </div>
+
+            <h2 class="project-title">
+              Blood Drips
+            </h2>
+
+            <div class="project-meta">
+              Tita Boku
+            </div>
+
+            <div class="project-desc">
+              Music Production · Songwriting · Vocals
+            </div>
+
+            <div class="project-note">
+              Mixed by Ken Lewis
+            </div>
+
+            <span class="project-link">
+              Open on Spotify ↗
+            </span>
+
           </a>
+
         </div>
       </div>
     </section>
 
+    <!-- CAPABILITIES -->
+
     <section id="capabilities">
       <div class="container">
-        <div class="section-label">Capabilities</div>
+
+        <div class="section-label">
+          Capabilities
+        </div>
 
         <div class="capabilities-lead-wrap">
+
           <h2 class="capabilities-lead">
             Sound, performance and technology shaped into experiences with a point of view.
           </h2>
-          <div class="capabilities-number">01 — 06</div>
+
+          <div class="capabilities-number">
+            01 — 06
+          </div>
+
         </div>
 
         <div class="capabilities-grid">
+
           <div class="capability">
             <span class="capability-number">01</span>
-            <h3 class="capability-title">Music Production</h3>
+
+            <h3 class="capability-title">
+              Music Production
+            </h3>
+
             <div class="capability-desc">
-              Original production, arrangement, songwriting and collaborative development across recorded music and artist-led projects.
+              Original production, arrangement, songwriting and collaborative
+              development across recorded music and artist-led projects.
             </div>
           </div>
 
           <div class="capability">
             <span class="capability-number">02</span>
-            <h3 class="capability-title">Vocals & Songwriting</h3>
+
+            <h3 class="capability-title">
+              Vocals & Songwriting
+            </h3>
+
             <div class="capability-desc">
-              Vocal composition, topline writing, lyric writing, recording, performance and creative development shaped around the identity of each project.
+              Vocal composition, topline writing, lyric writing, recording,
+              performance and creative development shaped around the identity
+              of each project.
             </div>
           </div>
 
           <div class="capability">
             <span class="capability-number">03</span>
-            <h3 class="capability-title">Sound Design</h3>
+
+            <h3 class="capability-title">
+              Sound Design
+            </h3>
+
             <div class="capability-desc">
-              Original sonic worlds for music, performance, visual work and experimental media, from texture and atmosphere to rhythm-forward design.
+              Original sonic worlds for music, performance, visual work and
+              experimental media, from texture and atmosphere to rhythm-forward design.
             </div>
           </div>
 
           <div class="capability">
             <span class="capability-number">04</span>
-            <h3 class="capability-title">Live & Interdisciplinary</h3>
+
+            <h3 class="capability-title">
+              Live & Interdisciplinary
+            </h3>
+
             <div class="capability-desc">
-              Music and sound developed in conversation with movement, projection, theatre, visual art and collaborative production environments.
+              Music and sound developed in conversation with movement,
+              projection, theatre, visual art and collaborative production environments.
             </div>
           </div>
 
           <div class="capability">
             <span class="capability-number">05</span>
-            <h3 class="capability-title">Creative Technology</h3>
+
+            <h3 class="capability-title">
+              Creative Technology
+            </h3>
+
             <div class="capability-desc">
-              Practice shaped through digital production, studio technology, experimental workflows and curiosity for new tools and hybrid forms.
+              Practice shaped through digital production, studio technology,
+              experimental workflows and curiosity for new tools and hybrid forms.
             </div>
           </div>
 
           <div class="capability">
             <span class="capability-number">06</span>
+
             <h3 class="capability-title">
-              Interactive Worlds <span class="capability-tag">Emerging</span>
+              Interactive Worlds
+              <span class="capability-tag">
+                Emerging
+              </span>
             </h3>
+
             <div class="capability-desc">
-              A growing direction toward indie game development, world-building and interactive storytelling as part of Hement’s evolving creative future.
+              A growing direction toward indie game development, world-building
+              and interactive storytelling as part of Hement’s evolving creative future.
             </div>
           </div>
+
         </div>
       </div>
     </section>
+
+    <!-- STUDIO -->
 
     <section id="studio">
       <div class="container">
-        <div class="section-label">Studio</div>
+
+        <div class="section-label">
+          Studio
+        </div>
 
         <div class="studio-grid">
+
           <div class="studio-image-wrap">
+
             <img
               class="studio-image"
               src="hement-studio.png"
-              alt="Hement Productions studio setup"
+              alt="Hement Productions recording and production studio"
             />
+
           </div>
 
           <div class="studio-copy">
-            <h2 class="studio-title">A working studio built for writing, sound and production.</h2>
+
+            <h2 class="studio-title">
+              A working studio built for writing, sound and production.
+            </h2>
 
             <div class="studio-text">
-              Hement’s studio practice is grounded in hands-on making: composing, producing, recording, editing and shaping ideas from first sketch to finished form.
+              Hement’s studio practice is grounded in hands-on making:
+              composing, producing, recording, editing and shaping ideas
+              from first sketch to finished form.
             </div>
 
             <div class="studio-text">
-              The space supports both intimate songwriting and more experimental sound work, with a workflow that moves fluidly between vocals, electronic production, sound design and collaborative development.
+              The space supports both intimate songwriting and more
+              experimental sound work, with a workflow that moves fluidly
+              between vocals, electronic production, sound design and
+              collaborative development.
             </div>
 
             <div class="studio-text">
-              It is also the place where future directions are taking shape — including interactive audio, world-building and the early foundations of indie game development.
+              It is also the place where future directions are taking shape —
+              including interactive audio, world-building and the early
+              foundations of indie game development.
             </div>
 
             <div class="studio-details">
+
               <div class="detail-row">
-                <div class="detail-label">Focus</div>
-                <div class="detail-value">
-                  Music production · Vocal production · Sound design · Recording · Creative experimentation
+
+                <div class="detail-label">
+                  Focus
                 </div>
+
+                <div class="detail-value">
+                  Music production · Vocal production · Sound design ·
+                  Recording · Creative experimentation
+                </div>
+
               </div>
 
               <div class="detail-row">
-                <div class="detail-label">Workflow</div>
-                <div class="detail-value">
-                  Songwriting, composition, electronic production, editing, live-performance development and interdisciplinary collaboration
+
+                <div class="detail-label">
+                  Workflow
                 </div>
+
+                <div class="detail-value">
+                  Songwriting, composition, electronic production, editing,
+                  live-performance development and interdisciplinary collaboration
+                </div>
+
               </div>
 
               <div class="detail-row">
-                <div class="detail-label">Direction</div>
+
+                <div class="detail-label">
+                  Direction
+                </div>
+
                 <div class="detail-value">
                   Expanding toward interactive audio, indie games and digital storytelling
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
+
+    <!-- ABOUT -->
 
     <section id="about">
       <div class="container">
+
         <div class="about-grid">
+
           <div class="about-photo">
-            <img src="rohini-founder-photo.jpg" alt="Portrait of Rohini Soedhwa" />
+
+            <img
+              src="rohini-founder-photo.jpg"
+              alt="Portrait of Rohini Soedhwa"
+            />
+
           </div>
 
           <div class="about-copy">
-            <div class="about-role">Founder / Creative Director</div>
 
-            <h2 class="about-name">Rohini Soedhwa</h2>
+            <div class="about-role">
+              Founder / Creative Director
+            </div>
+
+            <h2 class="about-name">
+              Rohini Soedhwa
+            </h2>
 
             <div class="about-disciplines">
-              Music Producer · Songwriter · Vocalist · Sound Designer · Interdisciplinary Artist
+              Music Producer · Songwriter · Vocalist · Sound Designer ·
+              Interdisciplinary Artist
             </div>
 
             <div class="about-body">
+
               <p>
-                Hement Productions was founded by Rohini Soedhwa, also known through her artist work as Tita Boku. Born in Paramaribo, Suriname and now based in British Columbia, Rohini’s background and wide-ranging musical influences have shaped an instinct for experimentation, encouraging a practice that moves freely between genres, technologies and forms of expression.
+                Hement Productions was founded by Rohini Soedhwa, also known
+                through her artist work as Tita Boku. Born in Paramaribo,
+                Suriname and now based in British Columbia, Rohini’s background
+                and wide-ranging musical influences have shaped an instinct for
+                experimentation, encouraging a practice that moves freely between
+                genres, technologies and forms of expression.
               </p>
 
               <p>
-                Her work moves between experimental electronic music, pop, hip-hop, collaborative performance and visual culture, combining instinctive songwriting and vocal work with layered electronic production, sound design and a technically driven approach to creative practice.
+                Her work moves between experimental electronic music, pop,
+                hip-hop, collaborative performance and visual culture, combining
+                instinctive songwriting and vocal work with layered electronic
+                production, sound design and a technically driven approach to
+                creative practice.
               </p>
 
               <p>
-                Hement extends that practice into an evolving creative house for music, interdisciplinary work and emerging interactive worlds — with indie game development, world-building and new forms of digital storytelling forming part of its next chapter.
+                Hement extends that practice into an evolving creative house for
+                music, interdisciplinary work and emerging interactive worlds —
+                with indie game development, world-building and new forms of
+                digital storytelling forming part of its next chapter.
               </p>
+
             </div>
 
             <div class="about-facts">
+
               <div class="detail-row">
-                <div class="detail-label">Education</div>
-                <div class="detail-value">
-                  BFA in Electroacoustic Music — Simon Fraser University, School for the Contemporary Arts
+
+                <div class="detail-label">
+                  Education
                 </div>
+
+                <div class="detail-value">
+                  BFA in Electroacoustic Music — Simon Fraser University,
+                  School for the Contemporary Arts
+                </div>
+
               </div>
 
               <div class="detail-row">
-                <div class="detail-label">Practice</div>
-                <div class="detail-value">
-                  Music Production · Songwriting · Sound Design · Live Performance · Creative Technology
+
+                <div class="detail-label">
+                  Practice
                 </div>
+
+                <div class="detail-value">
+                  Music Production · Songwriting · Sound Design ·
+                  Live Performance · Creative Technology
+                </div>
+
               </div>
 
               <div class="detail-row">
-                <div class="detail-label">Based</div>
-                <div class="detail-value">British Columbia, Canada</div>
+
+                <div class="detail-label">
+                  Based
+                </div>
+
+                <div class="detail-value">
+                  British Columbia, Canada
+                </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
+
+    <!-- CONTACT -->
 
     <section id="contact">
       <div class="container">
-        <div class="section-label">Contact</div>
+
+        <div class="section-label">
+          Contact
+        </div>
 
         <div class="contact-grid">
+
           <div>
-            <h2 class="contact-title">Let’s build something with a pulse.</h2>
+
+            <h2 class="contact-title">
+              Let’s build something with a pulse.
+            </h2>
+
             <div class="contact-copy">
-              Hement Productions is open to conversations around music production, songwriting, interdisciplinary collaboration, sound design and future-facing creative work.
+              Hement Productions is open to conversations around music production,
+              songwriting, interdisciplinary collaboration, sound design and
+              future-facing creative work.
             </div>
+
           </div>
 
           <div class="contact-links">
-            <!-- Replace these with your real links / email -->
-            <a class="contact-link" href="mailto:your@email.com">Email</a>
-            <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer">Spotify</a>
-            <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <a class="contact-link" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+
+            <a class="contact-link" href="mailto:your@email.com">
+              Email
+            </a>
+
+            <a class="contact-link" href="#">
+              Spotify
+            </a>
+
+            <a class="contact-link" href="#">
+              YouTube
+            </a>
+
+            <a class="contact-link" href="#">
+              Instagram
+            </a>
+
           </div>
+
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
     <div class="container">
+
       <div class="footer-copy">
         © 2026 Hement Productions
       </div>
+
     </div>
   </footer>
+
 </body>
 </html>
