@@ -643,10 +643,20 @@
         align-items: flex-start;
         padding: 18px 0;
         flex-direction: column;
+        gap: 22px;
       }
 
       .nav {
-        gap: 20px;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        flex-wrap: nowrap;
+      }
+
+      .nav a {
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        white-space: nowrap;
       }
 
       .work-grid {
@@ -679,6 +689,13 @@
       .about-body p {
         font-size: clamp(1.35rem, 5vw, 2rem);
         line-height: 1.5;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav a {
+        font-size: 0.72rem;
+        letter-spacing: 0.13em;
       }
     }
   </style>
