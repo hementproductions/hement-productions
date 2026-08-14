@@ -17,7 +17,34 @@
       justify-content: center;
       text-align: center;
     }
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 28px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.brand {
+  font-size: 14px;
+  letter-spacing: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: #c7c0bb;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
     .hero {
       padding: 40px;
     }
@@ -28,7 +55,6 @@ h1 {
   font-weight: 400;
   letter-spacing: -2px;
   margin: 0 0 24px;
-  text-shadow: 0 0 45px rgba(92, 17, 28, 0.45);
 }
 
     p {
@@ -41,9 +67,22 @@ h1 {
 </head>
 
 <body>
+
+  <nav>
+    <div class="brand">HEMENT</div>
+
+    <div class="nav-links">
+      <a href="#">WORK</a>
+      <a href="#">STUDIO</a>
+      <a href="#">ABOUT</a>
+      <a href="#">CONTACT</a>
+    </div>
+  </nav>
+
   <section class="hero">
     <h1>Hement Productions</h1>
     <p>Music. Sound. Creative Technology.</p>
   </section>
+
 </body>
 </html>
